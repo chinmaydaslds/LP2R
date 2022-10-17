@@ -1,0 +1,72 @@
+\hypertarget{_l_p2_r_8h_source}{}\doxysection{LP2\+R.\+h}
+\label{_l_p2_r_8h_source}\index{include/LP2R.h@{include/LP2R.h}}
+\mbox{\hyperlink{_l_p2_r_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_LinLin\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_LinLin\_H\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_c___l_poly}{C\_LPoly}}\{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 \mbox{\hyperlink{class_c___l_poly}{C\_LPoly}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{23 \mbox{\hyperlink{class_c___l_poly}{C\_LPoly}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} M, \textcolor{keyword}{const} \textcolor{keywordtype}{double} W, \textcolor{keyword}{const} \textcolor{keywordtype}{double}  M\_e) :}
+\DoxyCodeLine{24  \mbox{\hyperlink{class_c___l_poly_a04c75b665517e37308fca90314923413}{mass}}(M), \mbox{\hyperlink{class_c___l_poly_a92496e2543e518edb7dc3483711702cf}{wt}}(W), \mbox{\hyperlink{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}{Z\_chain}}(M/M\_e), \mbox{\hyperlink{class_c___l_poly_aabff20f7c359337b4919c133e62c11ae}{t\_FRouse}}(\mbox{\hyperlink{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}{Z\_chain}}*\mbox{\hyperlink{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}{Z\_chain}}) \{\}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a04c75b665517e37308fca90314923413}{mass}}=0.0; }
+\DoxyCodeLine{27 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a92496e2543e518edb7dc3483711702cf}{wt}}=0.0; }
+\DoxyCodeLine{28 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}{Z\_chain}}=0.0; }
+\DoxyCodeLine{29 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a880bdefd9a6e382010951b382ca4ccc3}{z}}=0.0; }
+\DoxyCodeLine{31 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c___l_poly_aabc4418c233c0c65bb548e53fdd26329}{alive}}=\textcolor{keyword}{true}; }
+\DoxyCodeLine{32 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c___l_poly_a1bb8639ba5fa5b2b833c33e922b71cfc}{relax\_free\_Rouse}}=\textcolor{keyword}{false}; }
+\DoxyCodeLine{34 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c___l_poly_ab4b8e5d376cb693efd690a9a957b1411}{rept\_set}}=\textcolor{keyword}{false}; }
+\DoxyCodeLine{35 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a88e455a05296f1c42d50c4407781accc}{tau\_d\_0}}=1.0e22; }
+\DoxyCodeLine{36 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a467d8303f563a2b2935ed3e0428e5942}{Z\_rept}}=0.0; }
+\DoxyCodeLine{37 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_a75a643a27fcbdbad788f70b34e2ee74c}{rept\_wt}}=0.0; }
+\DoxyCodeLine{38 \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c___l_poly_a29d49f28db0cf8f16b98f3957ab580c6}{p\_max}}=0; }
+\DoxyCodeLine{39 \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c___l_poly_a65fcfd00b94e6404dc32a318681f8e44}{p\_next}}=0; }
+\DoxyCodeLine{41 \textcolor{keywordtype}{double} \mbox{\hyperlink{class_c___l_poly_aabff20f7c359337b4919c133e62c11ae}{t\_FRouse}}; }
+\DoxyCodeLine{42              \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{53 \textcolor{keyword}{class }\mbox{\hyperlink{class_inv_sq_sum}{InvSqSum}}\{ \textcolor{comment}{// sum(1/p\string^2)}}
+\DoxyCodeLine{54 \textcolor{keywordtype}{double} psum[500];}
+\DoxyCodeLine{55 \textcolor{keyword}{public}:}
+\DoxyCodeLine{56   \mbox{\hyperlink{class_inv_sq_sum}{InvSqSum}}()\{}
+\DoxyCodeLine{57    psum[0]=0.0; psum[1]=1.0;}
+\DoxyCodeLine{58    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=2; i<500; i++)\{psum[i]=psum[i-\/1]+1.0/((double) (i*i));\}}
+\DoxyCodeLine{59             \}}
+\DoxyCodeLine{60   \textcolor{keywordtype}{double} intg\_psum(\textcolor{keywordtype}{int} n1, \textcolor{keywordtype}{int} n2)\{}
+\DoxyCodeLine{61    \textcolor{keywordtype}{double} n1d=((double) n1); \textcolor{keywordtype}{double} n2d=((double) n2);}
+\DoxyCodeLine{62    \textcolor{keywordtype}{double} n1dsq=n1d*n1d; \textcolor{keywordtype}{double} n2dsq=n2d*n2d;}
+\DoxyCodeLine{63    \textcolor{keywordtype}{double} val=1.0/n1d -\/ 1.0/n2d + 0.50*(1.0/n1dsq + 1.0/n2dsq);}
+\DoxyCodeLine{64      val+=(1.0/(n1d*n1dsq) -\/ 1.0/(n2d*n2dsq))/6.0;}
+\DoxyCodeLine{65      \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{66                                   \}}
+\DoxyCodeLine{67    \textcolor{keywordtype}{double} operator()(\textcolor{keywordtype}{int} Z)\{}
+\DoxyCodeLine{68      \textcolor{keywordflow}{if}(Z < 500)\{\textcolor{keywordflow}{return} psum[Z];\}}
+\DoxyCodeLine{69      \textcolor{keywordflow}{else}\{ \textcolor{keywordflow}{return} psum[499]+intg\_psum(500,Z);\}}
+\DoxyCodeLine{70                         \}}
+\DoxyCodeLine{71    \textcolor{keywordtype}{double} operator()(\textcolor{keywordtype}{int} Z1, \textcolor{keywordtype}{int} Z2)\{}
+\DoxyCodeLine{72       \textcolor{keywordtype}{double} s1, s2;}
+\DoxyCodeLine{73       \textcolor{keywordflow}{if}(Z1 <= 500)\{s1=psum[Z1-\/1];\}}
+\DoxyCodeLine{74       \textcolor{keywordflow}{else}\{s1=psum[499]+intg\_psum(500,Z1-\/1);\}}
+\DoxyCodeLine{75       \textcolor{keywordflow}{if}(Z2 < 500)\{s2=psum[Z2];\}}
+\DoxyCodeLine{76       \textcolor{keywordflow}{else}\{s2=psum[499]+intg\_psum(500,Z2);\}}
+\DoxyCodeLine{77       \textcolor{keywordflow}{return} s2-\/s1;}
+\DoxyCodeLine{78                                  \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80               \};}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_p2_r___n_s_8h}{./LP2R\_NS.h}}"{}}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#include "{}./routines.h"{}}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

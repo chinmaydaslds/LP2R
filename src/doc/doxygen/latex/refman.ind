@@ -1,0 +1,447 @@
+\begin{theindex}
+
+  \item {A\_eq}
+    \subitem {LP2R\_NS}, \hyperpage{14}
+  \item {aa\_sort2\_minmax}
+    \subitem {GenLinGPC.cpp}, \hyperpage{32}
+  \item {aaerfcc}
+    \subitem {GenLinLogNormal.cpp}, \hyperpage{33}
+  \item {AboveTauEFirst}
+    \subitem {LP2R\_NS}, \hyperpage{14}
+  \item {Add\_header}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {alive}
+    \subitem {C\_LPoly}, \hyperpage{23}
+  \item {Alpha}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {assign\_RC\_dbl}
+    \subitem {ReadRCFL.cpp}, \hyperpage{36}
+  \item {assign\_RHS\_bool}
+    \subitem {ReadRCFL.cpp}, \hyperpage{37}
+
+  \indexspace
+
+  \item {B\_eq}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {B\_zeta}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {beta\_glass}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+
+  \indexspace
+
+  \item {C\_LPoly}, \hyperpage{23}
+    \subitem {alive}, \hyperpage{23}
+    \subitem {mass}, \hyperpage{23}
+    \subitem {p\_max}, \hyperpage{23}
+    \subitem {p\_next}, \hyperpage{24}
+    \subitem {relax\_free\_Rouse}, \hyperpage{24}
+    \subitem {rept\_set}, \hyperpage{24}
+    \subitem {rept\_wt}, \hyperpage{24}
+    \subitem {t\_FRouse}, \hyperpage{24}
+    \subitem {tau\_d\_0}, \hyperpage{24}
+    \subitem {wt}, \hyperpage{24}
+    \subitem {z}, \hyperpage{24}
+    \subitem {Z\_chain}, \hyperpage{24}
+    \subitem {Z\_rept}, \hyperpage{24}
+  \item {CalcDielectric}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {CalcVisc}
+    \subitem {CalcVisc.cpp}, \hyperpage{40}
+  \item {CalcVisc.cpp}
+    \subitem {CalcVisc}, \hyperpage{40}
+    \subitem {viscRouseModes}, \hyperpage{40}
+  \item {CSVdelimiter}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {CSVOpen}
+    \subitem {RepTateOut.cpp}, \hyperpage{45}
+  \item {CSVWrite}
+    \subitem {RepTateOut.cpp}, \hyperpage{45}
+  \item {cur\_time}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+
+  \indexspace
+
+  \item {deltaCR}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {DiRelSpecFNM}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {Disentanglement\_Switch}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+  \item {DtMult}
+    \subitem {LP2R\_NS}, \hyperpage{15}
+
+  \indexspace
+
+  \item {Entangled\_Dynamics}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+
+  \indexspace
+
+  \item {f\_Log}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {f\_phi}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {f\_trelax}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {FreqMax}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {FreqMin}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {FreqRatio}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+
+  \indexspace
+
+  \item {G\_0}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {G\_glass}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {GenLinGPC}
+    \subitem {GenLinGPC.cpp}, \hyperpage{33}
+  \item {GenLinGPC.cpp}
+    \subitem {aa\_sort2\_minmax}, \hyperpage{32}
+    \subitem {GenLinGPC}, \hyperpage{33}
+  \item {GenLinLogNormal}
+    \subitem {GenLinLogNormal.cpp}, \hyperpage{34}
+  \item {GenLinLogNormal.cpp}
+    \subitem {aaerfcc}, \hyperpage{33}
+    \subitem {GenLinLogNormal}, \hyperpage{34}
+    \subitem {LogNormalWt}, \hyperpage{34}
+  \item {GenLogFL}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {genPolyLin}
+    \subitem {genPolyLin.cpp}, \hyperpage{35}
+  \item {genPolyLin.cpp}
+    \subitem {genPolyLin}, \hyperpage{35}
+  \item {GStarGlass}
+    \subitem {GStarGlass.cpp}, \hyperpage{42}
+  \item {GStarGlass.cpp}
+    \subitem {GStarGlass}, \hyperpage{42}
+  \item {GStarSlow}
+    \subitem {GStarSlow.cpp}, \hyperpage{43}
+  \item {GStarSlow.cpp}
+    \subitem {GStarSlow}, \hyperpage{43}
+    \subitem {symbint}, \hyperpage{43}
+
+  \indexspace
+
+  \item {has\_chem}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {has\_label}
+    \subitem {LP2R\_NS}, \hyperpage{16}
+  \item {has\_origin}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {has\_temp}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+
+  \indexspace
+
+  \item {include/LP2R.h}, \hyperpage{27}
+  \item {include/LP2R\_global.h}, \hyperpage{28}
+  \item {include/LP2R\_NS.h}, \hyperpage{29}
+  \item {include/routines.h}, \hyperpage{30}
+  \item {inpFNM}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {InvSqSum}, \hyperpage{25}
+
+  \indexspace
+
+  \item {LastReptationTime}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {LastReptZ}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {Log\_DtMult}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {LogNormalWt}
+    \subitem {GenLinLogNormal.cpp}, \hyperpage{34}
+  \item {LP2R\_NS}, \hyperpage{13}
+    \subitem {A\_eq}, \hyperpage{14}
+    \subitem {AboveTauEFirst}, \hyperpage{14}
+    \subitem {Add\_header}, \hyperpage{15}
+    \subitem {Alpha}, \hyperpage{15}
+    \subitem {B\_eq}, \hyperpage{15}
+    \subitem {B\_zeta}, \hyperpage{15}
+    \subitem {beta\_glass}, \hyperpage{15}
+    \subitem {CalcDielectric}, \hyperpage{15}
+    \subitem {CSVdelimiter}, \hyperpage{15}
+    \subitem {cur\_time}, \hyperpage{15}
+    \subitem {deltaCR}, \hyperpage{15}
+    \subitem {DiRelSpecFNM}, \hyperpage{15}
+    \subitem {Disentanglement\_Switch}, \hyperpage{15}
+    \subitem {DtMult}, \hyperpage{15}
+    \subitem {Entangled\_Dynamics}, \hyperpage{16}
+    \subitem {f\_Log}, \hyperpage{16}
+    \subitem {f\_phi}, \hyperpage{16}
+    \subitem {f\_trelax}, \hyperpage{16}
+    \subitem {FreqMax}, \hyperpage{16}
+    \subitem {FreqMin}, \hyperpage{16}
+    \subitem {FreqRatio}, \hyperpage{16}
+    \subitem {G\_0}, \hyperpage{16}
+    \subitem {G\_glass}, \hyperpage{16}
+    \subitem {GenLogFL}, \hyperpage{16}
+    \subitem {has\_chem}, \hyperpage{16}
+    \subitem {has\_label}, \hyperpage{16}
+    \subitem {has\_origin}, \hyperpage{17}
+    \subitem {has\_temp}, \hyperpage{17}
+    \subitem {inpFNM}, \hyperpage{17}
+    \subitem {LastReptationTime}, \hyperpage{17}
+    \subitem {LastReptZ}, \hyperpage{17}
+    \subitem {Log\_DtMult}, \hyperpage{17}
+    \subitem {LPoly}, \hyperpage{17}
+    \subitem {M\_e}, \hyperpage{17}
+    \subitem {M\_Kuhn}, \hyperpage{17}
+    \subitem {MechRelFNM}, \hyperpage{17}
+    \subitem {MechRelSpecFNM}, \hyperpage{17}
+    \subitem {N\_e}, \hyperpage{17}
+    \subitem {npoly}, \hyperpage{18}
+    \subitem {OutPhiPhiST}, \hyperpage{18}
+    \subitem {OutPhiPhiSTFNM}, \hyperpage{18}
+    \subitem {Output\_G\_of\_t}, \hyperpage{18}
+    \subitem {OutputFormat}, \hyperpage{18}
+    \subitem {OutTermRelaxFNM}, \hyperpage{18}
+    \subitem {OutTermRelaxPathways}, \hyperpage{18}
+    \subitem {phi\_ar}, \hyperpage{18}
+    \subitem {phi\_eq}, \hyperpage{18}
+    \subitem {phi\_eq\_indx}, \hyperpage{18}
+    \subitem {phi\_rept}, \hyperpage{18}
+    \subitem {phi\_ST}, \hyperpage{19}
+    \subitem {phi\_ST\_0}, \hyperpage{19}
+    \subitem {phi\_ST\_ar}, \hyperpage{19}
+    \subitem {phi\_true}, \hyperpage{19}
+    \subitem {Psi\_rept}, \hyperpage{19}
+    \subitem {rcFNM}, \hyperpage{19}
+    \subitem {RelSpecFNM}, \hyperpage{19}
+    \subitem {Rept\_Switch\_Factor}, \hyperpage{19}
+    \subitem {reptate\_chem}, \hyperpage{19}
+    \subitem {reptate\_label}, \hyperpage{19}
+    \subitem {reptate\_origin}, \hyperpage{19}
+    \subitem {reptate\_temp}, \hyperpage{19}
+    \subitem {ret\_pref}, \hyperpage{20}
+    \subitem {ret\_pref\_0}, \hyperpage{20}
+    \subitem {ret\_switch\_exponent}, \hyperpage{20}
+    \subitem {Rouse\_Switch\_Factor}, \hyperpage{20}
+    \subitem {Rouse\_wt}, \hyperpage{20}
+    \subitem {ST\_activ\_time}, \hyperpage{20}
+    \subitem {STmaxDrop}, \hyperpage{20}
+    \subitem {supertube\_activated}, \hyperpage{20}
+    \subitem {Sys\_MN}, \hyperpage{20}
+    \subitem {Sys\_MW}, \hyperpage{20}
+    \subitem {Sys\_PDI}, \hyperpage{20}
+    \subitem {t\_ar}, \hyperpage{20}
+    \subitem {t\_CR\_START}, \hyperpage{21}
+    \subitem {t\_eq\_ar}, \hyperpage{21}
+    \subitem {tau\_e}, \hyperpage{21}
+    \subitem {tau\_glass}, \hyperpage{21}
+  \item {LPoly}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+
+  \indexspace
+
+  \item {M\_e}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {M\_Kuhn}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {main/LinPoly2Rheo.cpp}, \hyperpage{31}
+  \item {main/parse\_arg.cpp}, \hyperpage{31}
+  \item {mass}
+    \subitem {C\_LPoly}, \hyperpage{23}
+  \item {mdfiles/mainpage.h}, \hyperpage{32}
+  \item {MechRelFNM}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {MechRelSpecFNM}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+
+  \indexspace
+
+  \item {N\_e}
+    \subitem {LP2R\_NS}, \hyperpage{17}
+  \item {npoly}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+
+  \indexspace
+
+  \item {OutPhiPhiST}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {OutPhiPhiSTFNM}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {Output\_G\_of\_t}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {OutputFormat}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {OutTermRelaxFNM}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {OutTermRelaxPathways}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+
+  \indexspace
+
+  \item {p\_max}
+    \subitem {C\_LPoly}, \hyperpage{23}
+  \item {p\_next}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {parse\_arg}
+    \subitem {parse\_arg.cpp}, \hyperpage{32}
+  \item {parse\_arg.cpp}
+    \subitem {parse\_arg}, \hyperpage{32}
+  \item {phi\_ar}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {phi\_eq}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {phi\_eq\_indx}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {phi\_rept}
+    \subitem {LP2R\_NS}, \hyperpage{18}
+  \item {phi\_ST}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {phi\_ST\_0}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {phi\_ST\_ar}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {phi\_true}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {prep/assign\_FNMs.cpp}, \hyperpage{32}
+  \item {prep/GenLinGPC.cpp}, \hyperpage{32}
+  \item {prep/GenLinLogNormal.cpp}, \hyperpage{33}
+  \item {prep/GenLinWt.cpp}, \hyperpage{34}
+  \item {prep/genPolyLin.cpp}, \hyperpage{35}
+  \item {prep/ModelParams.cpp}, \hyperpage{35}
+  \item {prep/ReadInput.cpp}, \hyperpage{36}
+  \item {prep/ReadRCFL.cpp}, \hyperpage{36}
+  \item {Psi\_rept}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+
+  \indexspace
+
+  \item {rcFNM}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {readEquality}
+    \subitem {safeGetLine.cpp}, \hyperpage{46}
+  \item {ReadRCFL}
+    \subitem {ReadRCFL.cpp}, \hyperpage{37}
+  \item {ReadRCFL.cpp}
+    \subitem {assign\_RC\_dbl}, \hyperpage{36}
+    \subitem {assign\_RHS\_bool}, \hyperpage{37}
+    \subitem {ReadRCFL}, \hyperpage{37}
+  \item {Relax/arm\_retraction.cpp}, \hyperpage{37}
+  \item {Relax/frac\_unrelaxed.cpp}, \hyperpage{37}
+  \item {Relax/GetPhiEq.cpp}, \hyperpage{38}
+  \item {Relax/time\_step.cpp}, \hyperpage{38}
+  \item {Relax/try\_reptate.cpp}, \hyperpage{38}
+  \item {relax\_free\_Rouse}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {RelSpecFNM}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {rept\_set}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {Rept\_Switch\_Factor}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {rept\_wt}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {reptate\_chem}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {reptate\_label}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {reptate\_origin}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {reptate\_temp}
+    \subitem {LP2R\_NS}, \hyperpage{19}
+  \item {RepTateOpen}
+    \subitem {RepTateOut.cpp}, \hyperpage{45}
+  \item {RepTateOut.cpp}
+    \subitem {CSVOpen}, \hyperpage{45}
+    \subitem {CSVWrite}, \hyperpage{45}
+    \subitem {RepTateOpen}, \hyperpage{45}
+    \subitem {RepTateWrite}, \hyperpage{45}
+  \item {RepTateWrite}
+    \subitem {RepTateOut.cpp}, \hyperpage{45}
+  \item {ret\_pref}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {ret\_pref\_0}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {ret\_switch\_exponent}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {Rheology/add\_goft\_headers.cpp}, \hyperpage{39}
+  \item {Rheology/Calc\_goft.cpp}, \hyperpage{39}
+  \item {Rheology/CalcGstar.cpp}, \hyperpage{39}
+  \item {Rheology/CalcVisc.cpp}, \hyperpage{40}
+  \item {Rheology/GoftFast.cpp}, \hyperpage{40}
+  \item {Rheology/GoftRouse.cpp}, \hyperpage{41}
+  \item {Rheology/GoftTube.cpp}, \hyperpage{41}
+  \item {Rheology/GStarFastRouse.cpp}, \hyperpage{41}
+  \item {Rheology/GStarGlass.cpp}, \hyperpage{42}
+  \item {Rheology/GStarRouse.cpp}, \hyperpage{42}
+  \item {Rheology/GStarSlow.cpp}, \hyperpage{43}
+  \item {Rheology/LinRheology.cpp}, \hyperpage{44}
+  \item {Rheology/RepTateOut.cpp}, \hyperpage{44}
+  \item {Rouse\_Switch\_Factor}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {Rouse\_wt}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+
+  \indexspace
+
+  \item {safeGetline}
+    \subitem {safeGetLine.cpp}, \hyperpage{46}
+  \item {safeGetLine.cpp}
+    \subitem {readEquality}, \hyperpage{46}
+    \subitem {safeGetline}, \hyperpage{46}
+    \subitem {safeGetline\_int}, \hyperpage{47}
+  \item {safeGetline\_int}
+    \subitem {safeGetLine.cpp}, \hyperpage{47}
+  \item {ST\_activ\_time}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {STmaxDrop}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {supertube\_activated}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {symbint}
+    \subitem {GStarSlow.cpp}, \hyperpage{43}
+  \item {Sys\_MN}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {Sys\_MW}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {Sys\_PDI}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+
+  \indexspace
+
+  \item {t\_ar}
+    \subitem {LP2R\_NS}, \hyperpage{20}
+  \item {t\_CR\_START}
+    \subitem {LP2R\_NS}, \hyperpage{21}
+  \item {t\_eq\_ar}
+    \subitem {LP2R\_NS}, \hyperpage{21}
+  \item {t\_FRouse}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {tau\_d\_0}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {tau\_e}
+    \subitem {LP2R\_NS}, \hyperpage{21}
+  \item {tau\_glass}
+    \subitem {LP2R\_NS}, \hyperpage{21}
+
+  \indexspace
+
+  \item {util/safeGetLine.cpp}, \hyperpage{46}
+
+  \indexspace
+
+  \item {viscRouseModes}
+    \subitem {CalcVisc.cpp}, \hyperpage{40}
+
+  \indexspace
+
+  \item {wt}
+    \subitem {C\_LPoly}, \hyperpage{24}
+
+  \indexspace
+
+  \item {z}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {Z\_chain}
+    \subitem {C\_LPoly}, \hyperpage{24}
+  \item {Z\_rept}
+    \subitem {C\_LPoly}, \hyperpage{24}
+
+\end{theindex}

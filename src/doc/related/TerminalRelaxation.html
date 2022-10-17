@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<title> Output: Terminal relaxation pathways </title>
+<body>
+<p><strong>Terminal relaxation</strong></p>
+<p>If the variable <em><strong>OutTermRelaxPathways</strong></em> is set to <em><strong>yes</strong></em> via the resource file, information about terminal relaxation pathways of each chain are written in an output file. The default file name is <em>TermRelax.dat</em> (or, <em>.txt</em>). The default file name can be changed via the variable <em><strong>OutTermRelaxFNM</strong></em> (The appropriate extension will be added to the filename by the code).&nbsp;</p>
+<p>If the variable <strong><em>Add_header</em></strong> is not set to <em><strong>no</strong></em>, the output file will have a header line detailing the output. The fifth column in the output codes for the relaxation pathway with an integer. Depending on the relaxation pathways, the meaning of the entries in the other columns can be different and are detailed below:</p>
+<ol>
+<li>Index <em><strong>i</strong></em>: The first column simply states the index of the polymer in the ensemble. This is useful for blends where molar masses of different components overlap. Since the indices are given based on the appearance of the polymers in the inputfile, this variable can be used to separate polymers belonging to different components sharing the same relaxation pathway.<br /><br /></li>
+<li>Weight fraction <strong><em>w<sub>i</sub></em></strong>: The second column gives the weight fraction carried by this particular "chain" (remember a "chain" may represent all the chains having molar masses in a particular molar mass range).&nbsp;<br /><br /></li>
+<li>Molar mass <strong><em>M<sub>i</sub></em></strong>: The third column gives the mass of the chain.<br /><br /></li>
+<li>Relaxation time <strong><em>&tau;<sub>relax</sub> </em> </strong>: For unentangled chains, this time is set as the Rouse time&nbsp;<strong><em>&tau;<sub>R</sub> </em> </strong>. For chains whose terminal relaxation involves reptation this time is set to the longest reptation time&nbsp;<strong><em>&tau;<sub>d,0</sub> </em> </strong>. Chains in the highest molar mass end may become disentangled in the fat tube and relax with the timescale of being disentangled. For this chains, the time <strong><em>&tau;<sub>dis</sub> </em> </strong> in this entry are the time when the chains first become disentangled. Since the disentanglement is checked <em>after</em> performing the arm retraction during the time interval, some chains can be assinged terminal relaxation via contour length fluctuation in the fat tube and the time for those chains are given when all stress are relaxed via CLF <strong><em>&tau;<sub>CLF</sub></em>&nbsp;</strong> .</li>
+<li>Relaxation pathway :<br /><br /></li>
+<li>Relevant tube diameter <strong><em>&Phi;<sub>rel</sub> </em> </strong>&nbsp;:<br /><br /></li>
+<li>Speed up indicator:&nbsp;</li>
+</ol>
+</body>
+</html>

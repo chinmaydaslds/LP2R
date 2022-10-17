@@ -1,0 +1,46 @@
+\hypertarget{_calc_visc_8cpp}{}\doxysection{Rheology/\+Calc\+Visc.cpp File Reference}
+\label{_calc_visc_8cpp}\index{Rheology/CalcVisc.cpp@{Rheology/CalcVisc.cpp}}
+
+
+Zero shear viscosity.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_calc_visc_8cpp_a5fcdba2ec235c50dbc774267a8948020}{visc\+Rouse\+Modes}} (void)
+\begin{DoxyCompactList}\small\item\em Viscosity contribution from internal Rouse modes, Longitudinal modes, and Free Rouse chains. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_calc_visc_8cpp_a6533ed64a25092d97054fdb5f508dee2}\label{_calc_visc_8cpp_a6533ed64a25092d97054fdb5f508dee2}} 
+double {\bfseries visc\+Glass} (void)
+\begin{DoxyCompactList}\small\item\em zero-\/shear contribution from glassy modes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_calc_visc_8cpp_a639638471739a5c0b8039ed758205608}\label{_calc_visc_8cpp_a639638471739a5c0b8039ed758205608}} 
+double {\bfseries visc\+Tube\+Relax} (void)
+\begin{DoxyCompactList}\small\item\em zero-\/shear viscosity from tube relaxation in units of \mbox{[}G\+\_\+0 $\ast$ tau\+\_\+e\mbox{]} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_calc_visc_8cpp_a374902144454c699de293062a5e88cbd}{Calc\+Visc}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Zero shear viscosity. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_calc_visc_8cpp_a374902144454c699de293062a5e88cbd}\label{_calc_visc_8cpp_a374902144454c699de293062a5e88cbd}} 
+\index{CalcVisc.cpp@{CalcVisc.cpp}!CalcVisc@{CalcVisc}}
+\index{CalcVisc@{CalcVisc}!CalcVisc.cpp@{CalcVisc.cpp}}
+\doxysubsubsection{\texorpdfstring{CalcVisc()}{CalcVisc()}}
+{\footnotesize\ttfamily double Calc\+Visc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Return zero-\/shear viscosity as Pa-\/s \mbox{\Hypertarget{_calc_visc_8cpp_a5fcdba2ec235c50dbc774267a8948020}\label{_calc_visc_8cpp_a5fcdba2ec235c50dbc774267a8948020}} 
+\index{CalcVisc.cpp@{CalcVisc.cpp}!viscRouseModes@{viscRouseModes}}
+\index{viscRouseModes@{viscRouseModes}!CalcVisc.cpp@{CalcVisc.cpp}}
+\doxysubsubsection{\texorpdfstring{viscRouseModes()}{viscRouseModes()}}
+{\footnotesize\ttfamily double visc\+Rouse\+Modes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Viscosity contribution from internal Rouse modes, Longitudinal modes, and Free Rouse chains. 
+
+Return viscosity in units of G\+\_\+0$\ast$tau\+\_\+e 

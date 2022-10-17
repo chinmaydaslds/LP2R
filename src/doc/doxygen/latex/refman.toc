@@ -1,0 +1,220 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Linear rheology of linear polydisperse polymers}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Usage}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Input files}{2}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Material input file}{2}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Resource file}{3}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Output files}{4}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Relaxation spectra outputs}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Time relaxation}{5}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Tube diameters}{5}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Terminal relaxation pathways}{6}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Log file}{6}{subsection.1.4.5}%
+\contentsline {chapter}{\numberline {2}Namespace Index}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Namespace List}{7}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{9}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{11}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}LP2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NS Namespace Reference}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{14}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Variable Documentation}{14}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}A\_eq}{14}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}AboveTauEFirst}{15}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}Add\_header}{15}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}Alpha}{15}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}B\_eq}{15}{subsubsection.5.1.2.5}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}B\_zeta}{15}{subsubsection.5.1.2.6}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}beta\_glass}{15}{subsubsection.5.1.2.7}%
+\contentsline {subsubsection}{\numberline {5.1.2.8}CalcDielectric}{15}{subsubsection.5.1.2.8}%
+\contentsline {subsubsection}{\numberline {5.1.2.9}CSVdelimiter}{15}{subsubsection.5.1.2.9}%
+\contentsline {subsubsection}{\numberline {5.1.2.10}cur\_time}{15}{subsubsection.5.1.2.10}%
+\contentsline {subsubsection}{\numberline {5.1.2.11}deltaCR}{15}{subsubsection.5.1.2.11}%
+\contentsline {subsubsection}{\numberline {5.1.2.12}DiRelSpecFNM}{15}{subsubsection.5.1.2.12}%
+\contentsline {subsubsection}{\numberline {5.1.2.13}Disentanglement\_Switch}{15}{subsubsection.5.1.2.13}%
+\contentsline {subsubsection}{\numberline {5.1.2.14}DtMult}{16}{subsubsection.5.1.2.14}%
+\contentsline {subsubsection}{\numberline {5.1.2.15}Entangled\_Dynamics}{16}{subsubsection.5.1.2.15}%
+\contentsline {subsubsection}{\numberline {5.1.2.16}f\_Log}{16}{subsubsection.5.1.2.16}%
+\contentsline {subsubsection}{\numberline {5.1.2.17}f\_phi}{16}{subsubsection.5.1.2.17}%
+\contentsline {subsubsection}{\numberline {5.1.2.18}f\_trelax}{16}{subsubsection.5.1.2.18}%
+\contentsline {subsubsection}{\numberline {5.1.2.19}FreqMax}{16}{subsubsection.5.1.2.19}%
+\contentsline {subsubsection}{\numberline {5.1.2.20}FreqMin}{16}{subsubsection.5.1.2.20}%
+\contentsline {subsubsection}{\numberline {5.1.2.21}FreqRatio}{16}{subsubsection.5.1.2.21}%
+\contentsline {subsubsection}{\numberline {5.1.2.22}G\_0}{16}{subsubsection.5.1.2.22}%
+\contentsline {subsubsection}{\numberline {5.1.2.23}G\_glass}{16}{subsubsection.5.1.2.23}%
+\contentsline {subsubsection}{\numberline {5.1.2.24}GenLogFL}{16}{subsubsection.5.1.2.24}%
+\contentsline {subsubsection}{\numberline {5.1.2.25}has\_chem}{16}{subsubsection.5.1.2.25}%
+\contentsline {subsubsection}{\numberline {5.1.2.26}has\_label}{17}{subsubsection.5.1.2.26}%
+\contentsline {subsubsection}{\numberline {5.1.2.27}has\_origin}{17}{subsubsection.5.1.2.27}%
+\contentsline {subsubsection}{\numberline {5.1.2.28}has\_temp}{17}{subsubsection.5.1.2.28}%
+\contentsline {subsubsection}{\numberline {5.1.2.29}inpFNM}{17}{subsubsection.5.1.2.29}%
+\contentsline {subsubsection}{\numberline {5.1.2.30}LastReptationTime}{17}{subsubsection.5.1.2.30}%
+\contentsline {subsubsection}{\numberline {5.1.2.31}LastReptZ}{17}{subsubsection.5.1.2.31}%
+\contentsline {subsubsection}{\numberline {5.1.2.32}Log\_DtMult}{17}{subsubsection.5.1.2.32}%
+\contentsline {subsubsection}{\numberline {5.1.2.33}LPoly}{17}{subsubsection.5.1.2.33}%
+\contentsline {subsubsection}{\numberline {5.1.2.34}M\_e}{17}{subsubsection.5.1.2.34}%
+\contentsline {subsubsection}{\numberline {5.1.2.35}M\_Kuhn}{17}{subsubsection.5.1.2.35}%
+\contentsline {subsubsection}{\numberline {5.1.2.36}MechRelFNM}{17}{subsubsection.5.1.2.36}%
+\contentsline {subsubsection}{\numberline {5.1.2.37}MechRelSpecFNM}{17}{subsubsection.5.1.2.37}%
+\contentsline {subsubsection}{\numberline {5.1.2.38}N\_e}{18}{subsubsection.5.1.2.38}%
+\contentsline {subsubsection}{\numberline {5.1.2.39}npoly}{18}{subsubsection.5.1.2.39}%
+\contentsline {subsubsection}{\numberline {5.1.2.40}OutPhiPhiST}{18}{subsubsection.5.1.2.40}%
+\contentsline {subsubsection}{\numberline {5.1.2.41}OutPhiPhiSTFNM}{18}{subsubsection.5.1.2.41}%
+\contentsline {subsubsection}{\numberline {5.1.2.42}Output\_G\_of\_t}{18}{subsubsection.5.1.2.42}%
+\contentsline {subsubsection}{\numberline {5.1.2.43}OutputFormat}{18}{subsubsection.5.1.2.43}%
+\contentsline {subsubsection}{\numberline {5.1.2.44}OutTermRelaxFNM}{18}{subsubsection.5.1.2.44}%
+\contentsline {subsubsection}{\numberline {5.1.2.45}OutTermRelaxPathways}{18}{subsubsection.5.1.2.45}%
+\contentsline {subsubsection}{\numberline {5.1.2.46}phi\_ar}{18}{subsubsection.5.1.2.46}%
+\contentsline {subsubsection}{\numberline {5.1.2.47}phi\_eq}{18}{subsubsection.5.1.2.47}%
+\contentsline {subsubsection}{\numberline {5.1.2.48}phi\_eq\_indx}{18}{subsubsection.5.1.2.48}%
+\contentsline {subsubsection}{\numberline {5.1.2.49}phi\_rept}{19}{subsubsection.5.1.2.49}%
+\contentsline {subsubsection}{\numberline {5.1.2.50}phi\_ST}{19}{subsubsection.5.1.2.50}%
+\contentsline {subsubsection}{\numberline {5.1.2.51}phi\_ST\_0}{19}{subsubsection.5.1.2.51}%
+\contentsline {subsubsection}{\numberline {5.1.2.52}phi\_ST\_ar}{19}{subsubsection.5.1.2.52}%
+\contentsline {subsubsection}{\numberline {5.1.2.53}phi\_true}{19}{subsubsection.5.1.2.53}%
+\contentsline {subsubsection}{\numberline {5.1.2.54}Psi\_rept}{19}{subsubsection.5.1.2.54}%
+\contentsline {subsubsection}{\numberline {5.1.2.55}rcFNM}{19}{subsubsection.5.1.2.55}%
+\contentsline {subsubsection}{\numberline {5.1.2.56}RelSpecFNM}{19}{subsubsection.5.1.2.56}%
+\contentsline {subsubsection}{\numberline {5.1.2.57}Rept\_Switch\_Factor}{19}{subsubsection.5.1.2.57}%
+\contentsline {subsubsection}{\numberline {5.1.2.58}reptate\_chem}{19}{subsubsection.5.1.2.58}%
+\contentsline {subsubsection}{\numberline {5.1.2.59}reptate\_label}{19}{subsubsection.5.1.2.59}%
+\contentsline {subsubsection}{\numberline {5.1.2.60}reptate\_origin}{19}{subsubsection.5.1.2.60}%
+\contentsline {subsubsection}{\numberline {5.1.2.61}reptate\_temp}{20}{subsubsection.5.1.2.61}%
+\contentsline {subsubsection}{\numberline {5.1.2.62}ret\_pref}{20}{subsubsection.5.1.2.62}%
+\contentsline {subsubsection}{\numberline {5.1.2.63}ret\_pref\_0}{20}{subsubsection.5.1.2.63}%
+\contentsline {subsubsection}{\numberline {5.1.2.64}ret\_switch\_exponent}{20}{subsubsection.5.1.2.64}%
+\contentsline {subsubsection}{\numberline {5.1.2.65}Rouse\_Switch\_Factor}{20}{subsubsection.5.1.2.65}%
+\contentsline {subsubsection}{\numberline {5.1.2.66}Rouse\_wt}{20}{subsubsection.5.1.2.66}%
+\contentsline {subsubsection}{\numberline {5.1.2.67}ST\_activ\_time}{20}{subsubsection.5.1.2.67}%
+\contentsline {subsubsection}{\numberline {5.1.2.68}STmaxDrop}{20}{subsubsection.5.1.2.68}%
+\contentsline {subsubsection}{\numberline {5.1.2.69}supertube\_activated}{20}{subsubsection.5.1.2.69}%
+\contentsline {subsubsection}{\numberline {5.1.2.70}Sys\_MN}{20}{subsubsection.5.1.2.70}%
+\contentsline {subsubsection}{\numberline {5.1.2.71}Sys\_MW}{20}{subsubsection.5.1.2.71}%
+\contentsline {subsubsection}{\numberline {5.1.2.72}Sys\_PDI}{20}{subsubsection.5.1.2.72}%
+\contentsline {subsubsection}{\numberline {5.1.2.73}t\_ar}{21}{subsubsection.5.1.2.73}%
+\contentsline {subsubsection}{\numberline {5.1.2.74}t\_CR\_START}{21}{subsubsection.5.1.2.74}%
+\contentsline {subsubsection}{\numberline {5.1.2.75}t\_eq\_ar}{21}{subsubsection.5.1.2.75}%
+\contentsline {subsubsection}{\numberline {5.1.2.76}tau\_e}{21}{subsubsection.5.1.2.76}%
+\contentsline {subsubsection}{\numberline {5.1.2.77}tau\_glass}{21}{subsubsection.5.1.2.77}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{23}{chapter.6}%
+\contentsline {section}{\numberline {6.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LPoly Class Reference}{23}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{23}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Member Data Documentation}{23}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}alive}{23}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}mass}{23}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}p\_max}{24}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}p\_next}{24}{subsubsection.6.1.2.4}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}relax\_free\_Rouse}{24}{subsubsection.6.1.2.5}%
+\contentsline {subsubsection}{\numberline {6.1.2.6}rept\_set}{24}{subsubsection.6.1.2.6}%
+\contentsline {subsubsection}{\numberline {6.1.2.7}rept\_wt}{24}{subsubsection.6.1.2.7}%
+\contentsline {subsubsection}{\numberline {6.1.2.8}t\_FRouse}{24}{subsubsection.6.1.2.8}%
+\contentsline {subsubsection}{\numberline {6.1.2.9}tau\_d\_0}{24}{subsubsection.6.1.2.9}%
+\contentsline {subsubsection}{\numberline {6.1.2.10}wt}{24}{subsubsection.6.1.2.10}%
+\contentsline {subsubsection}{\numberline {6.1.2.11}z}{24}{subsubsection.6.1.2.11}%
+\contentsline {subsubsection}{\numberline {6.1.2.12}Z\_chain}{24}{subsubsection.6.1.2.12}%
+\contentsline {subsubsection}{\numberline {6.1.2.13}Z\_rept}{24}{subsubsection.6.1.2.13}%
+\contentsline {section}{\numberline {6.2}Inv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sq\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sum Class Reference}{25}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{25}{subsection.6.2.1}%
+\contentsline {chapter}{\numberline {7}File Documentation}{27}{chapter.7}%
+\contentsline {section}{\numberline {7.1}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LP2R.h File Reference}{27}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{27}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}LP2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{27}{section.7.2}%
+\contentsline {section}{\numberline {7.3}LP2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}global.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{28}{section.7.3}%
+\contentsline {section}{\numberline {7.4}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LP2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NS.h File Reference}{29}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{29}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}LP2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NS.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.7.5}%
+\contentsline {section}{\numberline {7.6}routines.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{30}{section.7.6}%
+\contentsline {section}{\numberline {7.7}main/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poly2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rheo.cpp File Reference}{31}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{31}{subsection.7.7.1}%
+\contentsline {section}{\numberline {7.8}main/parse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}arg.cpp File Reference}{31}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{31}{subsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.8.2}Function Documentation}{32}{subsection.7.8.2}%
+\contentsline {subsubsection}{\numberline {7.8.2.1}parse\_arg()}{32}{subsubsection.7.8.2.1}%
+\contentsline {section}{\numberline {7.9}mainpage.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{32}{section.7.9}%
+\contentsline {section}{\numberline {7.10}prep/assign\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}FNMs.cpp File Reference}{32}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{32}{subsection.7.10.1}%
+\contentsline {section}{\numberline {7.11}prep/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GPC.cpp File Reference}{32}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{32}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}Function Documentation}{32}{subsection.7.11.2}%
+\contentsline {subsubsection}{\numberline {7.11.2.1}aa\_sort2\_minmax()}{33}{subsubsection.7.11.2.1}%
+\contentsline {subsubsection}{\numberline {7.11.2.2}GenLinGPC()}{33}{subsubsection.7.11.2.2}%
+\contentsline {section}{\numberline {7.12}prep/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Normal.cpp File Reference}{33}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{33}{subsection.7.12.1}%
+\contentsline {subsection}{\numberline {7.12.2}Function Documentation}{33}{subsection.7.12.2}%
+\contentsline {subsubsection}{\numberline {7.12.2.1}aaerfcc()}{33}{subsubsection.7.12.2.1}%
+\contentsline {subsubsection}{\numberline {7.12.2.2}GenLinLogNormal()}{34}{subsubsection.7.12.2.2}%
+\contentsline {subsubsection}{\numberline {7.12.2.3}LogNormalWt()}{34}{subsubsection.7.12.2.3}%
+\contentsline {section}{\numberline {7.13}prep/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wt.cpp File Reference}{34}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{35}{subsection.7.13.1}%
+\contentsline {section}{\numberline {7.14}prep/gen\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Poly\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lin.cpp File Reference}{35}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{35}{subsection.7.14.1}%
+\contentsline {subsection}{\numberline {7.14.2}Function Documentation}{35}{subsection.7.14.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.1}genPolyLin()}{35}{subsubsection.7.14.2.1}%
+\contentsline {section}{\numberline {7.15}prep/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Model\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Params.cpp File Reference}{35}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{36}{subsection.7.15.1}%
+\contentsline {section}{\numberline {7.16}prep/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Input.cpp File Reference}{36}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{36}{subsection.7.16.1}%
+\contentsline {section}{\numberline {7.17}prep/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Read\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RCFL.cpp File Reference}{36}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{36}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Function Documentation}{36}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}assign\_RC\_dbl()}{36}{subsubsection.7.17.2.1}%
+\contentsline {subsubsection}{\numberline {7.17.2.2}assign\_RHS\_bool()}{37}{subsubsection.7.17.2.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.3}ReadRCFL()}{37}{subsubsection.7.17.2.3}%
+\contentsline {section}{\numberline {7.18}Relax/arm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}retraction.cpp File Reference}{37}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{37}{subsection.7.18.1}%
+\contentsline {section}{\numberline {7.19}Relax/frac\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}unrelaxed.cpp File Reference}{37}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{37}{subsection.7.19.1}%
+\contentsline {section}{\numberline {7.20}Relax/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Phi\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Eq.cpp File Reference}{38}{section.7.20}%
+\contentsline {subsection}{\numberline {7.20.1}Detailed Description}{38}{subsection.7.20.1}%
+\contentsline {section}{\numberline {7.21}Relax/time\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}step.cpp File Reference}{38}{section.7.21}%
+\contentsline {subsection}{\numberline {7.21.1}Detailed Description}{38}{subsection.7.21.1}%
+\contentsline {section}{\numberline {7.22}Relax/try\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}reptate.cpp File Reference}{38}{section.7.22}%
+\contentsline {subsection}{\numberline {7.22.1}Detailed Description}{38}{subsection.7.22.1}%
+\contentsline {section}{\numberline {7.23}Rheology/add\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goft\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}headers.cpp File Reference}{39}{section.7.23}%
+\contentsline {subsection}{\numberline {7.23.1}Detailed Description}{39}{subsection.7.23.1}%
+\contentsline {section}{\numberline {7.24}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Calc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}goft.cpp File Reference}{39}{section.7.24}%
+\contentsline {subsection}{\numberline {7.24.1}Detailed Description}{39}{subsection.7.24.1}%
+\contentsline {section}{\numberline {7.25}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Calc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Gstar.cpp File Reference}{39}{section.7.25}%
+\contentsline {subsection}{\numberline {7.25.1}Detailed Description}{39}{subsection.7.25.1}%
+\contentsline {section}{\numberline {7.26}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Calc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Visc.cpp File Reference}{40}{section.7.26}%
+\contentsline {subsection}{\numberline {7.26.1}Detailed Description}{40}{subsection.7.26.1}%
+\contentsline {subsection}{\numberline {7.26.2}Function Documentation}{40}{subsection.7.26.2}%
+\contentsline {subsubsection}{\numberline {7.26.2.1}CalcVisc()}{40}{subsubsection.7.26.2.1}%
+\contentsline {subsubsection}{\numberline {7.26.2.2}viscRouseModes()}{40}{subsubsection.7.26.2.2}%
+\contentsline {section}{\numberline {7.27}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Goft\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fast.cpp File Reference}{40}{section.7.27}%
+\contentsline {subsection}{\numberline {7.27.1}Detailed Description}{40}{subsection.7.27.1}%
+\contentsline {section}{\numberline {7.28}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Goft\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rouse.cpp File Reference}{41}{section.7.28}%
+\contentsline {subsection}{\numberline {7.28.1}Detailed Description}{41}{subsection.7.28.1}%
+\contentsline {section}{\numberline {7.29}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Goft\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tube.cpp File Reference}{41}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Detailed Description}{41}{subsection.7.29.1}%
+\contentsline {section}{\numberline {7.30}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GStar\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rouse.cpp File Reference}{41}{section.7.30}%
+\contentsline {subsection}{\numberline {7.30.1}Detailed Description}{42}{subsection.7.30.1}%
+\contentsline {section}{\numberline {7.31}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GStar\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Glass.cpp File Reference}{42}{section.7.31}%
+\contentsline {subsection}{\numberline {7.31.1}Detailed Description}{42}{subsection.7.31.1}%
+\contentsline {subsection}{\numberline {7.31.2}Function Documentation}{42}{subsection.7.31.2}%
+\contentsline {subsubsection}{\numberline {7.31.2.1}GStarGlass()}{42}{subsubsection.7.31.2.1}%
+\contentsline {section}{\numberline {7.32}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GStar\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rouse.cpp File Reference}{42}{section.7.32}%
+\contentsline {subsection}{\numberline {7.32.1}Detailed Description}{43}{subsection.7.32.1}%
+\contentsline {section}{\numberline {7.33}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}GStar\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Slow.cpp File Reference}{43}{section.7.33}%
+\contentsline {subsection}{\numberline {7.33.1}Detailed Description}{43}{subsection.7.33.1}%
+\contentsline {subsection}{\numberline {7.33.2}Function Documentation}{43}{subsection.7.33.2}%
+\contentsline {subsubsection}{\numberline {7.33.2.1}GStarSlow()}{43}{subsubsection.7.33.2.1}%
+\contentsline {subsubsection}{\numberline {7.33.2.2}symbint()}{44}{subsubsection.7.33.2.2}%
+\contentsline {section}{\numberline {7.34}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rheology.cpp File Reference}{44}{section.7.34}%
+\contentsline {subsection}{\numberline {7.34.1}Detailed Description}{44}{subsection.7.34.1}%
+\contentsline {section}{\numberline {7.35}Rheology/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rep\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Out.cpp File Reference}{44}{section.7.35}%
+\contentsline {subsection}{\numberline {7.35.1}Detailed Description}{44}{subsection.7.35.1}%
+\contentsline {subsection}{\numberline {7.35.2}Function Documentation}{45}{subsection.7.35.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.1}CSVOpen()}{45}{subsubsection.7.35.2.1}%
+\contentsline {subsubsection}{\numberline {7.35.2.2}CSVWrite()}{45}{subsubsection.7.35.2.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.3}RepTateOpen()}{45}{subsubsection.7.35.2.3}%
+\contentsline {subsubsection}{\numberline {7.35.2.4}RepTateWrite()}{45}{subsubsection.7.35.2.4}%
+\contentsline {section}{\numberline {7.36}util/safe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Get\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Line.cpp File Reference}{46}{section.7.36}%
+\contentsline {subsection}{\numberline {7.36.1}Detailed Description}{46}{subsection.7.36.1}%
+\contentsline {subsection}{\numberline {7.36.2}Function Documentation}{46}{subsection.7.36.2}%
+\contentsline {subsubsection}{\numberline {7.36.2.1}readEquality()}{46}{subsubsection.7.36.2.1}%
+\contentsline {subsubsection}{\numberline {7.36.2.2}safeGetline()}{46}{subsubsection.7.36.2.2}%
+\contentsline {subsubsection}{\numberline {7.36.2.3}safeGetline\_int()}{47}{subsubsection.7.36.2.3}%
+\contentsline {chapter}{Index}{49}{section*.37}%

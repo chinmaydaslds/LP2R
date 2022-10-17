@@ -1,0 +1,50 @@
+\hypertarget{parse__arg_8cpp}{}\doxysection{main/parse\+\_\+arg.cpp File Reference}
+\label{parse__arg_8cpp}\index{main/parse\_arg.cpp@{main/parse\_arg.cpp}}
+
+
+parse command line arguments  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/tclap/\+Cmd\+Line.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{parse__arg_8cpp_a519ae5b06fbc19352378c3ec4465f255}{parse\+\_\+arg}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+parse command line arguments 
+
+options \mbox{[}-\/i input\+\_\+file\mbox{]} \mbox{[}-\/r resource\+\_\+file\mbox{]} \mbox{[}-\/d\mbox{]} \mbox{[}-\/L\mbox{]} \mbox{[}-\/v\mbox{]} \mbox{[}-\/h\mbox{]} \mbox{[}--version\mbox{]} \mbox{[}--help\mbox{]} ~\newline
+-\/i input\+\_\+file \+: Read material and polymer information from this file (default\+: inp.\+dat) ~\newline
+~\newline
+-\/r resource\+\_\+file \+: Model parameters (default\+: LP2\+R.\+rc).~\newline
+ Will use default values if the file does not exist. ~\newline
+~\newline
+-\/d \+: Switch on output of dielectric response. ~\newline
+~\newline
+-\/L \+: Output steps in LP2\+Rlog.\+txt, useful for debugging. ~\newline
+~\newline
+-\/v / --version \+: version information ~\newline
+-\/h / --help \+: help page. ~\newline
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{parse__arg_8cpp_a519ae5b06fbc19352378c3ec4465f255}\label{parse__arg_8cpp_a519ae5b06fbc19352378c3ec4465f255}} 
+\index{parse\_arg.cpp@{parse\_arg.cpp}!parse\_arg@{parse\_arg}}
+\index{parse\_arg@{parse\_arg}!parse\_arg.cpp@{parse\_arg.cpp}}
+\doxysubsubsection{\texorpdfstring{parse\_arg()}{parse\_arg()}}
+{\footnotesize\ttfamily int parse\+\_\+arg (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+parse command line arguments 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & number of arguments passed to main. \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & character array containing the arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero if parsed properly and non-\/zero in case of error. 
+\end{DoxyReturn}

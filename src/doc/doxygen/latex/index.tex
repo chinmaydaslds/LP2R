@@ -1,0 +1,199 @@
+~ ~ ~ ~ \copyright{} Chinmay Das and Daniel J. Read ~\newline
+ ~ ~ ~ ~ ~ ~ 28/09/2022 ~\newline
+ ~ ~ ~ ~ ~ ~ \href{https://www.gnu.org/licenses/gpl-3.0.en.html}{\texttt{ GNU GPLv3 }} (or at your option any later version) ~\newline
+
+
+\DoxyHorRuler{0}
+ \hypertarget{index_sec_intro}{}\doxysection{Introduction}\label{index_sec_intro}
+The code in this depository accompanies our paper {\itshape \char`\"{}\+A tube model for predicting the stress and dielectric relaxations of polydisperse linear polymers\char`\"{}} submitted to {\itshape Journal of Rheology} (2022). This implements modern ideas about how constraint release and tube escape modes in linear polymer melts affect each other in a numerical code to predict linear respose in arbitrarily polydisperse linear polymers. The information about the polymers can be supplied as moments of a distribution, or as data files containing gel permeation chromatography measurements (GPC), or a set of discrete molar masses and associated weight fractions. Arbitrarily complex blends can be designed by adding several such components. Besides the mechanical relaxation moduli, the code also can calculate dielectric relaxation for type-\/A polymers (polymers with monomer dipole moments aligned along the chain backbone). With appropriate instructions, the code outputs evolutions of model constructs like different dynamic tube diameters or how a specific molar mass chain will undergo the terminal relaxation.
+
+The code is available for download from \href{https://github.com/chinmaydaslds/LP2R}{\texttt{ github}}. On UNIX/\+Linux systems, you can use {\itshape  make} command from {\itshape  LP2\+R/src/obj } subdirectory to create the executable. A precompiled windows executable is available from \href{https://drive.google.com/file/d/1gO2Z3UWPi1zeLnvmpjs5II3OA2hJrPla/view?usp=sharing}{\texttt{ google drive}}. A snapshot of the code at the time of submission of this paper including the submitted preprint is available at \href{https://zenodo.org}{\texttt{ zenodo. }}
+
+The rest of this page documents the command line options, input file syntax, and output file formats.
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize   \hypertarget{index_sec_usage}{}\doxysection{Usage}\label{index_sec_usage}
+{\ttfamily  LP2R \mbox{[}-\/L\mbox{]} \mbox{[}-\/d\mbox{]} \mbox{[}-\/i inputfile\mbox{]} \mbox{[}-\/r resourcefile\mbox{]} \mbox{[}-\/h\mbox{]} \mbox{[}-\/}{\ttfamily -\/version\mbox{]} } ~\newline
+
+
+\doxyparagraph*{{\bfseries{Optional command line arguments\+:}}}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{-\/L}} \+: Output debugging and extra information in a file named {\bfseries{{\itshape LP2\+Rlog.\+txt~\newline
+~\newline
+}}} 
+\item {\bfseries{-\/i}} inputfile \+: material and output frequency information supplied via a named file. Default inputfile name is {\itshape {\bfseries{inp.\+dat~\newline
+~\newline
+}}} 
+\item {\bfseries{-\/r}} resourcefile \+: Presumably chemistry independent parameters, and output options can be set via a resource file. Default resourcefile name is {\itshape {\bfseries{LP2\+R.\+rc~\newline
+~\newline
+}}} 
+\item {\bfseries{-\/h}} \+: help (this usage information)~\newline
+~\newline
+ 
+\item {\bfseries{-\/ -\/version}} \+: version information 
+\end{DoxyItemize}
+
+~
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize  \hypertarget{index_sec_input}{}\doxysection{Input files}\label{index_sec_input}
+The code expects input to be supplied from plain text files. The percentage (\%) character is used as a comment character in the files. If the first non-\/space character in a line is \%, the entire line is ignored. Similarly a \% sign can be used beyond the intended input in the same line to add comments. The files are read one line at a time -\/ so, if multiple entries are supposed to be in the same line, a line break between entries will lead to input error. The input file itself may contain names of some other file containing detailed molecular weight information. In such cases, names containing space or percentage sign will not be processed correctly. Avoid names like {\bfseries{ \char`\"{}\+Molecular Weight.\+txt\char`\"{} }} or {\bfseries{ \char`\"{}\+PI100k(2\%)\+\_\+\+PI50k(98\%).\+txt\char`\"{}}}\+: The first name will be truncated to {\bfseries{ {\itshape  \char`\"{}\+Molecular\char`\"{} } }} and the second will be truncated to {\bfseries{ {\itshape  \char`\"{}\+PI100k(2\char`\"{} }}} and the code will fail to find the intended data file.
+
+Two different files are used for input\+: The first should supply the material parameters and the frequency range over which relaxation spectra is desired. The default file name for this file is {\bfseries{ {\itshape  inp.\+dat }}}. A different file can be supplied with the command line option {\bfseries{ {\itshape  -\/i filename }}}. Details of the information required in this file are described in \mbox{\hyperlink{index_sec_inp}{Material input file}} .
+
+The second optional file supplies model parameters that are thought to be insensitive to the chemistry, and can be used to choose the results that the code should generate. The default file name for this resource file is {\bfseries{ {\itshape  LP2\+R.\+rc }}}. A different file can be supplied with the command line option {\bfseries{ {\itshape  -\/r filename }}}. Details of the information required in this file are described in \mbox{\hyperlink{index_sec_rc}{Resource file}} .
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize  \hypertarget{index_sec_inp}{}\doxysubsection{Material input file}\label{index_sec_inp}
+The information about the polymers is supplied via a plain-\/text file called {\bfseries{ inp.\+dat }} (a different file can be used by using the command line option {\bfseries{ {\itshape  -\/i filename } }}). The input can be imagined as having three distinct parts\+: the first part gives the frequency range and discretization for the relaxation spectra output, the second part inputs the material parameters (chemistry dependent but architucture independent parameters), and finally the third part inputs the information about the molar mass distribution(s) of the molecules of interest.
+
+The first valid line (the code will ignore comment lines or empty lines) needs the minimum angular frequency ({$\omega$}\textsubscript{min}), the maximum angular frequency ({$\omega$}\textsubscript{max}) and the ratio of successive angular frequencies ({$\omega$}\textsubscript{ratio}) for the desired relaxation spectra output.
+
+The second valid line requires the Kuhn molar mass (M\textsubscript{Kuhn}) in g/mole, entanglement molar mass (M\textsubscript{e}) in g/mole, plateau modulus (G\textsubscript{N}\textsuperscript{0}) in Pa, and the entanglement time ({$\tau$}\textsubscript{e}) in seconds. The third line gives the glassy modulus (G\textsubscript{{$\infty$}}) in Pa, glassy relaxation time ({$\tau$}\textsubscript{g}) in seconds and the exponent for the stretched exponential glassy relaxation ({$\beta$}\textsubscript{g}).
+
+The fourth line contains a single integer specifying the number of components (n\textsubscript{comp}) forming the blend. (In the special case of single component polymer, this number is one). A {\itshape  component } is understood to be a set of {\itshape  molecules } having a easily described distribution. For each of these components, additional two input-\/lines are given to characterize the components. The first of thse lines contain an integer parameter (p\textsubscript{type}) and the weight fraction of this component (w\textsubscript{comp}) in the blend. If {\bfseries{ p\textsubscript{type}=0}}, the component is assumed to be represented by a log-\/normal distribution. The following line in that case needs number of discrete molar masses to be used to represent the distribution (n\textsubscript{poly}), the weight-\/averaged molar mass (M\textsubscript{W}) in g/mole and the polydispersity index (PDI). Instead if, {\bfseries{ p\textsubscript{type}=1}}, the molar mass distribution is assumed to exist as a GPC measurement and the second line of component specification in that case gives the file name of the GPC data. The GPC file should have usual \{M, d\+W/dlog\textsubscript{10}M \} values with the molar mass in g/mole. Finally, {\bfseries{ p\textsubscript{type}=2}}, assumes that the molar mass is specified by a set of weights associated with discrete sets of molar mass. Again, the second line of component specification is a file name and the file should contain two columns\+: molar mass in g/mole and the associated weights \{M\textsubscript{i}, w\textsubscript{i} \}.
+
+The following is an input file for 1,4-\/PI at 25\textdegree{}C for a 1131000 g/mole polymer assumed to be described by a log-\/normal distribution\+:  1.\+0e-\/4 1.\+0e6 1.\+2 ~ ~ \% ~ ~ {$\omega$}\textsubscript{min}, {$\omega$}\textsubscript{max}, {$\omega$}\textsubscript{ratio} ~\newline
+ 113.\+0 4350.\+0 476000.\+0 1.\+30e-\/5 ~ ~ \% ~ ~ M\textsubscript{Kuhn}, M\textsubscript{e}, G\textsubscript{N}\textsuperscript{0}, {$\tau$}\textsubscript{e} ~\newline
+ 1.\+0e9 7.\+0e-\/11 0.\+370 ~ ~ \% ~ ~ G\textsubscript{{$\infty$}}, {$\tau$}\textsubscript{g}, {$\beta$}\textsubscript{g} ~\newline
+ 1 ~ ~ \% ~ ~ Single component\+: n\textsubscript{comp}=1 ~\newline
+ 0 1.\+0 ~ ~ \% ~ ~ p\textsubscript{type}=0 (log-\/normal distribution), w\textsubscript{comp}=1 ~\newline
+ 50 1131000 1.\+05 ~ ~ \% ~ ~ n\textsubscript{poly}=50, M\textsubscript{W}, PDI ~\newline
+ 
+
+Blending 30-\/wt\% 226kg/mole polymer would require an input file like the following  1.\+0e-\/4 1.\+0e6 1.\+2 ~ ~ \% ~ ~ {$\omega$}\textsubscript{min}, {$\omega$}\textsubscript{max}, {$\omega$}\textsubscript{ratio} ~\newline
+ 113.\+0 4350.\+0 476000.\+0 1.\+30e-\/5 ~ ~ \% ~ ~ M\textsubscript{Kuhn}, M\textsubscript{e}, G\textsubscript{N}\textsuperscript{0}, {$\tau$}\textsubscript{e} ~\newline
+ 1.\+0e9 7.\+0e-\/11 0.\+370 ~ ~ \% ~ ~ G\textsubscript{{$\infty$}}, {$\tau$}\textsubscript{g}, {$\beta$}\textsubscript{g} ~\newline
+ 2 ~ ~ \% ~ ~ {\bfseries{ Two components \+:}} ~ ~ n\textsubscript{comp}=2 ~\newline
+ 0 0.\+70 ~ ~ \% ~ ~ {\bfseries{ {\itshape  First component\+: } }} ~ ~ p\textsubscript{type}=0 (log-\/normal distribution), w\textsubscript{comp}=0.\+70 ~\newline
+ 50 1131000 1.\+05 ~ ~ \% ~ ~ n\textsubscript{poly}=50, M\textsubscript{W}, PDI ~\newline
+ 0 0.\+30 ~ ~ \% ~ ~ {\bfseries{ {\itshape  Second component\+: } }} ~ ~ p\textsubscript{type}=0 (log-\/normal distribution), w\textsubscript{comp}=0.\+30 ~\newline
+ 50 225900 1.\+03 ~ ~ \% ~ ~ n\textsubscript{poly}=50, M\textsubscript{W}, PDI ~\newline
+ 
+
+Some more examples of input files can be found in the examples subdirectory in the code distribution.
+
+{\itshape  Some pointers about the input\+: } ~\newline
+
+
+\textbullet{}~ A strictly monodisperse polymer can be specified by choosing a log-\/normal distribution (p\textsubscript{type}=0) and PDI=1, or n\textsubscript{poly}=1 in the specification of the distribution. ~\newline
+
+
+\textbullet{}~ If the glassy parameters are not be available for the chemistry of interest, a good starting point may be G\textsubscript{{$\infty$}}=1.\+0e9, {$\tau$}\textsubscript{g}=1.\+0e5 {$\times$} {$\tau$}\textsubscript{e}, and {$\beta$}\textsubscript{g}=0.\+35.
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize   \hypertarget{index_sec_rc}{}\doxysubsection{Resource file}\label{index_sec_rc}
+The code searches for a file named {\bfseries{ {\itshape  LP2\+R.\+rc }}} in the current directory to input additional parameters besides the material parameters. A different file can be specified with command line option {\bfseries{ {\itshape  -\/r filename } }}. In the absence of this file, the code will continue with default parameters and options detailed below. Similarly any entry in the file that is not understood by the code is silenty ignored. If you use the command line option {\bfseries{ {\itshape  -\/L }}} to generate a log file, such unresolved entries will be written in the log file as warning messages. Each entry in the resource file is a property-\/value pair separated by a equal (=) sign. Each line can contain only one such property-\/value pair. Unlike the material input file, the ordering of the different entries in the file does not have any consequence.
+
+A sample file with all options set to default values is available in the examples/rcdefault subdirectory.
+
+{\bfseries{\% Model parameters}} 
+
+ Alpha=1.\+0 ~ ~ ~ \% ~ ~ Dilution exponent {$\alpha$} ~\newline
+ t\+\_\+\+CR\+\_\+\+START=1.\+0 ~ ~ ~ \% ~ ~ Constraint release starts after this time (in units of {$\tau$}\textsubscript{e}) ~\newline
+ delta\+CR=0.\+30 ~ ~ ~ \% ~ ~ Fractional drop in {$\varphi$}\textsubscript{ST} for {$\tau$}\textsubscript{CR }\guillemotright{} {$\tau$}\textsubscript{e} ({$\delta$}\textsubscript{CR}\textsuperscript{{$\infty$}}) ~\newline
+ B\+\_\+zeta=2.\+0 ~ ~ ~ \% ~ ~ Proportionality constant relating friction coefficient to supertube fraction (B\textsubscript{{$\zeta$}})~\newline
+ A\+\_\+eq=2.\+0 ~ ~ ~ \% ~ ~ Proportionality constant connecting \char`\"{}effective equilibrium time\char`\"{} and time to locally equiilbiate in a certain supertube (A\textsubscript{eq}) ~\newline
+ B\+\_\+eq=10.\+0 ~ ~ ~ \% ~ ~ Constant delaying equilibrium for fast CR events (B\textsubscript{eq}) ~\newline
+ ret\+\_\+pref=0.\+189 ~ ~ ~ \% ~ ~ Constant in arm retraction formula (C\textsubscript{a,{$\infty$}}) ~\newline
+ ret\+\_\+pref\+\_\+0=0.\+020 ~ ~ ~ \% ~ ~ Short-\/time prefactor for CLF~(C\textsubscript{a,0}) ~\newline
+ ret\+\_\+switch\+\_\+exponent=0.\+42 ~ ~ ~ \% ~ ~ Exponent~{$\varepsilon$}\textsubscript{a }determining how steeply CLF switches to long-\/time strength ~\newline
+ Rept\+\_\+\+Switch\+\_\+\+Factor=1.\+664 ~ ~ ~ \% ~ ~ Constant deciding transition from CLF to reptation (K\textsubscript{{\itshape R}}) ~\newline
+ Rouse\+\_\+\+Switch\+\_\+\+Factor=1.\+5 ~ ~ ~ \% ~ ~ Minimum number of bare entanglements to be considered entangled (Z\textsubscript{U}) ~\newline
+ Disentanglement\+\_\+\+Switch=1.\+0 ~ ~ ~ \% ~ ~ Number of surviving entanglements in the supertube below which chains relax by \char`\"{}disentanglement\char`\"{} ~\newline
+ 
+
+{\bfseries{\% Time discretization}} 
+
+ Start\+\_\+time=1.\+0e-\/3 ~ ~ ~ \% ~ ~ Start of integration (in units of {$\tau$}\textsubscript{e}) ~\newline
+ Time\+\_\+ratio=1.\+02 ~ ~ ~ \% ~ ~ Ratio of successive discrete times ~\newline
+ 
+
+{\bfseries{\% Options for results }} 
+
+ Calc\+Dielectric=no ~ ~ ~ \% ~ ~ \char`\"{}yes\char`\"{} asks for dielectric relaxation spectra. ~\newline
+ Out\+Term\+Relax\+Pathways=no ~ ~ ~ \% ~ ~ \char`\"{}yes\char`\"{} outputs individual chain relaxation modes. ~\newline
+ Out\+Phi\+Phi\+ST=no ~ ~ ~ \% ~ ~ \char`\"{}yes\char`\"{} outputs evolution of different tube diameters ~\newline
+ Output\+\_\+\+G\+\_\+of\+\_\+t=no ~ ~ ~ \% ~ ~ \char`\"{}yes\char`\"{} asks for time relaxation of modulus ~\newline
+ 
+
+{\bfseries{\% Control of output }} 
+
+ Output\+Format=Default ~ ~ ~ \% ~ ~ Other options are \char`\"{}\+Text\char`\"{}, \char`\"{}\+CSV\char`\"{} and \char`\"{}\+Rep\+Tate\char`\"{} ~\newline
+ CSVdelimiter=, ~ ~ ~ \% ~ ~ For {\itshape  Output\+Format=CSV } you can specify a different delimiter than usual comma (,) ~\newline
+ Add\+\_\+header=yes ~ ~ ~ \% ~ ~ \char`\"{}no\char`\"{} does not add header line in the output files ~\newline
+ label=~ ~ ~ \% ~ ~ You can specify a string as a label (default is an empty string). The label will be used in output file names. ~\newline
+ chem=~ ~ ~ \% ~ ~ You can specify a string as chemistry (default is an empty string). If specifed and {\itshape  Output\+Format=Rep\+Tate }, this will be added in the output headers. ~\newline
+ origin=~ ~ ~ \% ~ ~ You can specify a string as origin (default is an empty string). If specifed and {\itshape  Output\+Format=Rep\+Tate }, this will be added in the output headers. ~\newline
+ Temp=0.\+0~ ~ ~ \% ~ ~ You can specify the temperature (in degree centigrades). If {\itshape  Output\+Format=Rep\+Tate }, this will be added in the output headers. ~\newline
+ 
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize  \hypertarget{index_sec_output}{}\doxysection{Output files}\label{index_sec_output}
+By default the code only outputs the mechanical relaxation spectra G'({$\omega$}) and G'' ({$\omega$}). In addition, you can ask it to output the dielectric relaxation spectra {$\varepsilon$}'({$\omega$}) and {$\varepsilon$}''({$\omega$}) (assuming that the dipoles are aligned along the chain backbone), time domain mechanical relaxation G(t), evolution of different relevant tube constraints after an instantaneous small shear deformation, and assignment of the terminal relaxation pathway for each chain in the ensemble. These additional outputs are initiated by setting the appropriate flags in the resource file to {\itshape  yes }. The different outputs are directed to different files with the contents somewhat dependent on the {\itshape  Output\+Format } variable set from the resource file. If the {\itshape  label } option is set in the resource file, the files include the label as part of their names.
+
+If {\itshape  Output\+Format=Default}, the output file names have {\bfseries{{\itshape  .dat }}} extensions. Unless the option {\itshape  Add\+\_\+header } is not set to {\itshape  no } in the resource file (the default behaviour is {\itshape  Add\+\_\+header=yes }), the first line will be a header line starting with a hash (\#) character (default comment option for many UNIX plotting softwares). The choice {\itshape  Output\+Format=Text} behaves similarly as the {\itshape  Output\+Format=Default} option, except that the filenames end with {\bfseries{{\itshape  .txt }}} extensions and the header line, if not switched off with {\itshape  Add\+\_\+header=no } in the resource file, start without a \# character. {\itshape  Output\+Format=CSV } behaves like {\itshape  Output\+Format=Text} except the entries are separated by a comma (,) (or, any other character chosen via {\itshape  CSVdelimiter } in the resource file) and the file names end with {\bfseries{{\itshape  .csv }}} extensions. {\itshape  Output\+Format=Rep\+Tate} uses \href{https://reptate.readthedocs.io/}{\texttt{ Rep\+Tate }} specific extensions and data formats for the relaxation spectra and the time relaxation function. For other outputs, it uses the same outputs as the {\itshape  Output\+Format=Text} choice. The headers for the relaxation spectra and the time relaxation function in this case contain temperature that can be set via the variable {\itshape  Temp} in the resource file. In absence of a supplied value, a default temperature of 0\textdegree{}C will be added to the headers. Additional options {\itshape chem}, {\itshape label}, and {\itshape origin} can be set via the resource file and they will be added in the Rep\+Tate format output headers.
+
+The subsections below document the different outputs separately.
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize  \hypertarget{index_sec_gtp}{}\doxysubsection{Relaxation spectra outputs}\label{index_sec_gtp}
+By default, the code always outputs G'({$\omega$}) and G''({$\omega$}) in an range of angular frequencies {$\omega$}\textsubscript{min} and {$\omega$}\textsubscript{ max} with the ratio of subsequent frequencies being {$\omega$} \textsubscript{ratio}. These frequency information is set in the first line of the \href{sec_inp}{\texttt{ material input file}}. In addition, dielectric relaxation output is given if either {\bfseries{ {\itshape  -\/d } }} option is used at the command line or there is an entry {\itshape  Calc\+Dielectric=yes } in the resource file.
+
+Except for {\itshape  Output\+Format=Rep\+Tate}, if the varialbe {\itshape  label} is not set, the releaxation spectra output is written in a file {\bfseries{ Rel\+Spec.\+extn }} with {\itshape  extn} is either {\itshape  dat }, {\itshape  txt}, or {\itshape  csv } depending on the setting for the {\itshape  Output\+Format}. If the {\itshape  label} variable is set, for example {\itshape  label=PS112k }, the file name instead will be set to {\bfseries{RS\+\_\+\+PS112k.\+extn}} with appropriate choices of {\itshape  extn}. The entries in the file are {\bfseries{ 1. }} frequency {$\omega$}, {\bfseries{ 2. }} dynamic storage modulus G'({$\omega$}), {\bfseries{ 3. }} dynamic loss modulus G''({$\omega$}), {\bfseries{ 4. }} dynamic viscosity {$\eta$}'' ({$\omega$}), {\bfseries{ 5. }} dielectric storage modulus {$\varepsilon$}'({$\omega$}), {\bfseries{ 6. }} dielectric loss modulus {$\varepsilon$}''({$\omega$}). The dielectric information (columns 5 and 6) are only present if appropriate instruction is given either via the command line flag or via the resource file.
+
+If {\itshape  Output\+Format=Rep\+Tate } is chosen, the mechanical output is written in {\bfseries{ Mech\+Spec.\+tts }} in the absence of {\itshape  label } variable in the resource file, and, if asked for, dielectric response in file {\bfseries{ Di\+Spec.\+dls }}. If {\itshape  label } is set, for example as {\itshape  PS112k }, the file names will be {\bfseries{ PS112k.\+tts }} and {\bfseries{ PS112k.\+dls }} respectively. The contents of the mechanical relaxation file are the {\bfseries{ 1. }} frequency {$\omega$}, {\bfseries{ 2. }} dynamic storage modulus G'({$\omega$}), {\bfseries{ 3. }} dynamic loss modulus G''({$\omega$}) and those of the dielectric file are the {\bfseries{ 1. }} frequency {$\omega$}, {\bfseries{ 2. }} dielectric storage modulus {$\varepsilon$}'({$\omega$}), {\bfseries{ 3. }} dielectric loss modulus {$\varepsilon$}''({$\omega$}).
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize  \hypertarget{index_sec_gt}{}\doxysubsection{Time relaxation}\label{index_sec_gt}
+Time domain decay of modulus after a step strain is calculated if {\itshape  Output\+\_\+\+G\+\_\+of\+\_\+t=yes } option is set via the \href{sec_rc}{\texttt{ resource file }} (the default is {\itshape  Output\+\_\+\+G\+\_\+of\+\_\+t=no}). As with relaxation spectra, file name extensions for {\itshape Output\+Format=Default}, {\itshape  Text} and {\itshape  CSV } are respectively .dat, .txt, and .csv. In the absence of {\itshape label} in the \href{sec_rc}{\texttt{ resource file }}, the data is written in a file named {\bfseries{ Mech\+Rel }} with appropriate file extension. The data are set of time t, modulus G(t), tube survival probability {$\mu$}(t), and the constraint release contribution R(t). With {\itshape Output\+Format=Rep\+Tate}, time t and modulus G(t) is written in file {\bfseries{ Mech\+Rel.\+gt}}. With the {\itshape label} variable set, for example as {\itshape label=PS100k}, the file name for {\itshape Output\+Format=Rep\+Tate} choice will be {\bfseries{ PS100k.\+gt}}. With the same label, {\itshape Output\+Format=Default} will use a file {\bfseries{ MR\+\_\+\+PS100k.\+dat }}. Other choices will change the file extension appropriately.
+
+The range of time for the time relaxation output is chosen to be between 10\textsuperscript{-\/4} {$\tau$}\textsubscript{e} and 10\textsuperscript{4} {$\tau$}\textsubscript{d}, with {$\tau$}\textsubscript{d} being the longest relaxation time. These times can only be changed by editing {\itshape  \mbox{\hyperlink{_calc__goft_8cpp}{src/\+Rheology/\+Calc\+\_\+goft.\+cpp}} } in the source code.
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize   \hypertarget{index_sec_phi}{}\doxysubsection{Tube diameters}\label{index_sec_phi}
+If {\itshape  Out\+Phi\+Phi\+ST=yes } option is set via the \href{sec_rc}{\texttt{ resource file }} (the default is {\itshape  Out\+Phi\+Phi\+ST=no}), different dynamic tube diameters ({\bfseries{ a\textsubscript{X}}}) are output in terms of associated fractions of unrelaxed tube constraints ({\bfseries{ {$\varphi$}\textsubscript{X} }})\+: {\bfseries{ a\textsubscript{X} = a\textsubscript{0} {$\varphi$}\textsubscript{X}\textsuperscript{-\/{$\alpha$}/2}}} with {\bfseries{a\textsubscript{0}}} being the {\itshape equilibrium} tube diameter or the bare tube diameter. The output is written in a file named {\bfseries{STube}} with appropriate extension in the absence of the {\itshape  label} string. If the {\itshape label} variable is set, for example as {\itshape label=PI645k}, the file name will be {\bfseries{STube\+\_\+\+PI645k}} with appropriate extension. The output contains {\bfseries{ 1.}} time after step deformation t, {\bfseries{ 2.}} fraction of unrelaxed tube contraints {$\varphi$}(t), {\bfseries{ 3.}} supertube fraction {$\varphi$}\textsubscript{ST}(t), {\bfseries{ 4. }} {\itshape  equilibriated } constraint fraction {$\varphi$}\textsubscript{eq}(t), {\bfseries{ 5. }} constraint fraction allowing reptation {$\varphi$}\textsubscript{rept}(t), and {\bfseries{ 6. }} enhancement of reptation due to contour length fluctuation along fat tube {$\Psi$}\textsubscript{min}(t).
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize   \hypertarget{index_sec_pathway}{}\doxysubsection{Terminal relaxation pathways}\label{index_sec_pathway}
+If the variable {\itshape {\bfseries{Out\+Term\+Relax\+Pathways}}} is set to {\itshape {\bfseries{yes}}} via the resource file, information about terminal relaxation pathways of each chain is written in an output file named {\itshape Term\+Relax.\+dat} (or {\itshape .txt}, or {\itshape  .csv}) in the absence of the {\itshape  label } variable. With {\itshape  label } set to some string, that string is appended to {\itshape Term\+R\+\_\+} along with an appropriate extension.
+
+The output contains {\bfseries{1.}} Index {\itshape {\bfseries{i}}} (index of the polymer in the ensemble), {\bfseries{2.}} Weight fraction {\bfseries{{\itshape w\textsubscript{i}}}}, {\bfseries{3.}} Molar mass {\bfseries{{\itshape M\textsubscript{i}}}}, {\bfseries{4.}} Relaxation time {\bfseries{{\itshape {$\tau$}\textsubscript{relax} } }}, {\bfseries{5.}} Integer code for relaxation pathway, {\bfseries{6.}} Relevant constraint fraction, {\bfseries{7.}} Speed up factor from fat tube CLF.
+
+The integer code in the fifth column is set to 0 for unentangled chains. For those chains, {\bfseries{{\itshape {$\tau$}\textsubscript{relax} }}} is set to the Rouse time of the chains {\bfseries{{\itshape {$\tau$}\textsubscript{R} } }}. The entries in both the sixth and seventh columns in this case are 1 signifying irrelevance of tube dilation for the relaxation of these chains.
+
+When the chain of concern relaxes by reptation, the fifth column is set to 1 and the ~{\bfseries{{\itshape {$\tau$}\textsubscript{relax}}}} is set to the reptation time~{\bfseries{{\itshape {$\tau$}\textsubscript{d} } }}. The sixth column in this case gives \${$\varphi$}\textsubscript{T}\$ associated with the optimal tube diameter for reptation at the time the chain switches from relaxing by contour length fluctuation to reptation. The seventh column in this case is the speed up due to fat tube CLF {$\Psi$}\textsubscript{min}, evaluated at the time the chain commits to relax remaining stress via reptation.
+
+When a chain effectively becomes unentangled in the {\itshape  supertube}, the remaining stress associated with the chain relaxes with this time scale via {\itshape  disentanglement}. In such cases, the fifth column is set to 2 and the ~{\bfseries{{\itshape {$\tau$}\textsubscript{relax}}}} is set to the time at which the chain first becomes disentangled. The sixth column in this case report {$\varphi$}\textsubscript{ST} and the seventh column reports the speed up factor {$\Psi$}\textsubscript{min} evaluated at the time of disentanglement.
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize   \hypertarget{index_sec_log}{}\doxysubsection{Log file}\label{index_sec_log}
+Command line argument {\bfseries{ -\/L }} directs the code to write information in a file named {\bfseries{ LP2\+Rlog.\+txt }}. If something goes wrong during processing the input files, the log file can be helpful in resolving the place where the code failed. The log file also reports molar mass moments (M\textsubscript{N}, M\textsubscript{W}, and M\textsubscript{Z}) and the zero-\/shear viscosity.
+
+ 
+\footnotesize  Go to {\bfseries{ \href{sec_intro}{\texttt{ Table of Contents }} }} ~\newline
+ {$\Rightarrow$} \mbox{\hyperlink{index_sec_intro}{Introduction}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_usage}{Usage}} ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_input}{Input files}} ~ \textbullet{}  \href{sec_inp}{\texttt{ Material input file }} ~  \textbullet{}  \href{sec_rc}{\texttt{ Resource file }}  ~ ~ {$\Rightarrow$} \mbox{\hyperlink{index_sec_output}{Output files}} ~ \textbullet{}  \href{sec_gtp}{\texttt{ Relaxation spectra }}  ~ \textbullet{}  \href{sec_gt}{\texttt{ Time relaxation }}  ~ \textbullet{}  \href{sec_phi}{\texttt{ Tube diameters }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_pathway}{\texttt{ Relaxation pathways }}  ~ \textbullet{}  \href{sec_log}{\texttt{ Log file }}  ~ 
+\normalsize   \DoxyHorRuler{0}
+ 

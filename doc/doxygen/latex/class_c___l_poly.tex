@@ -1,0 +1,130 @@
+\hypertarget{class_c___l_poly}{}\doxysection{C\+\_\+\+LPoly Class Reference}
+\label{class_c___l_poly}\index{C\_LPoly@{C\_LPoly}}
+
+
+{\ttfamily \#include $<$LP2\+R.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c___l_poly_a329c188c7c46b022b7610619f7b0b98a}\label{class_c___l_poly_a329c188c7c46b022b7610619f7b0b98a}} 
+{\bfseries C\+\_\+\+LPoly} (const double M, const double W, const double M\+\_\+e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a04c75b665517e37308fca90314923413}{mass}} =0.\+0
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a92496e2543e518edb7dc3483711702cf}{wt}} =0.\+0
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}{Z\+\_\+chain}} =0.\+0
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a880bdefd9a6e382010951b382ca4ccc3}{z}} =0.\+0
+\item 
+bool \mbox{\hyperlink{class_c___l_poly_aabc4418c233c0c65bb548e53fdd26329}{alive}} =true
+\item 
+bool \mbox{\hyperlink{class_c___l_poly_a1bb8639ba5fa5b2b833c33e922b71cfc}{relax\+\_\+free\+\_\+\+Rouse}} =false
+\item 
+bool \mbox{\hyperlink{class_c___l_poly_ab4b8e5d376cb693efd690a9a957b1411}{rept\+\_\+set}} =false
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a88e455a05296f1c42d50c4407781accc}{tau\+\_\+d\+\_\+0}} =1.\+0e22
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a467d8303f563a2b2935ed3e0428e5942}{Z\+\_\+rept}} =0.\+0
+\item 
+double \mbox{\hyperlink{class_c___l_poly_a75a643a27fcbdbad788f70b34e2ee74c}{rept\+\_\+wt}} =0.\+0
+\item 
+int \mbox{\hyperlink{class_c___l_poly_a29d49f28db0cf8f16b98f3957ab580c6}{p\+\_\+max}} =0
+\item 
+int \mbox{\hyperlink{class_c___l_poly_a65fcfd00b94e6404dc32a318681f8e44}{p\+\_\+next}} =0
+\item 
+double \mbox{\hyperlink{class_c___l_poly_aabff20f7c359337b4919c133e62c11ae}{t\+\_\+\+FRouse}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Agreegate class to hold information about a linear polymer 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c___l_poly_aabc4418c233c0c65bb548e53fdd26329}\label{class_c___l_poly_aabc4418c233c0c65bb548e53fdd26329}} 
+\index{C\_LPoly@{C\_LPoly}!alive@{alive}}
+\index{alive@{alive}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{alive}{alive}}
+{\footnotesize\ttfamily bool C\+\_\+\+LPoly\+::alive =true}
+
+Becomes false if the chain completely relaxes \mbox{\Hypertarget{class_c___l_poly_a04c75b665517e37308fca90314923413}\label{class_c___l_poly_a04c75b665517e37308fca90314923413}} 
+\index{C\_LPoly@{C\_LPoly}!mass@{mass}}
+\index{mass@{mass}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{mass}{mass}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::mass =0.\+0}
+
+molar mass of the polymer (g/mole) \mbox{\Hypertarget{class_c___l_poly_a29d49f28db0cf8f16b98f3957ab580c6}\label{class_c___l_poly_a29d49f28db0cf8f16b98f3957ab580c6}} 
+\index{C\_LPoly@{C\_LPoly}!p\_max@{p\_max}}
+\index{p\_max@{p\_max}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{p\_max}{p\_max}}
+{\footnotesize\ttfamily int C\+\_\+\+LPoly\+::p\+\_\+max =0}
+
+Highest reptation mode \mbox{\Hypertarget{class_c___l_poly_a65fcfd00b94e6404dc32a318681f8e44}\label{class_c___l_poly_a65fcfd00b94e6404dc32a318681f8e44}} 
+\index{C\_LPoly@{C\_LPoly}!p\_next@{p\_next}}
+\index{p\_next@{p\_next}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{p\_next}{p\_next}}
+{\footnotesize\ttfamily int C\+\_\+\+LPoly\+::p\+\_\+next =0}
+
+Next available reptation mode \mbox{\Hypertarget{class_c___l_poly_a1bb8639ba5fa5b2b833c33e922b71cfc}\label{class_c___l_poly_a1bb8639ba5fa5b2b833c33e922b71cfc}} 
+\index{C\_LPoly@{C\_LPoly}!relax\_free\_Rouse@{relax\_free\_Rouse}}
+\index{relax\_free\_Rouse@{relax\_free\_Rouse}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{relax\_free\_Rouse}{relax\_free\_Rouse}}
+{\footnotesize\ttfamily bool C\+\_\+\+LPoly\+::relax\+\_\+free\+\_\+\+Rouse =false}
+
+True for unentangled chains \mbox{\Hypertarget{class_c___l_poly_ab4b8e5d376cb693efd690a9a957b1411}\label{class_c___l_poly_ab4b8e5d376cb693efd690a9a957b1411}} 
+\index{C\_LPoly@{C\_LPoly}!rept\_set@{rept\_set}}
+\index{rept\_set@{rept\_set}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{rept\_set}{rept\_set}}
+{\footnotesize\ttfamily bool C\+\_\+\+LPoly\+::rept\+\_\+set =false}
+
+Becomes true once further relaxation is assigned tobe via reptation \mbox{\Hypertarget{class_c___l_poly_a75a643a27fcbdbad788f70b34e2ee74c}\label{class_c___l_poly_a75a643a27fcbdbad788f70b34e2ee74c}} 
+\index{C\_LPoly@{C\_LPoly}!rept\_wt@{rept\_wt}}
+\index{rept\_wt@{rept\_wt}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{rept\_wt}{rept\_wt}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::rept\+\_\+wt =0.\+0}
+
+Weight associated with reptation \mbox{\Hypertarget{class_c___l_poly_aabff20f7c359337b4919c133e62c11ae}\label{class_c___l_poly_aabff20f7c359337b4919c133e62c11ae}} 
+\index{C\_LPoly@{C\_LPoly}!t\_FRouse@{t\_FRouse}}
+\index{t\_FRouse@{t\_FRouse}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{t\_FRouse}{t\_FRouse}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::t\+\_\+\+FRouse}
+
+Relaxation time by free Rouse relaxation (Z\+\_\+chain$^\wedge$2) tau\+\_\+e \mbox{\Hypertarget{class_c___l_poly_a88e455a05296f1c42d50c4407781accc}\label{class_c___l_poly_a88e455a05296f1c42d50c4407781accc}} 
+\index{C\_LPoly@{C\_LPoly}!tau\_d\_0@{tau\_d\_0}}
+\index{tau\_d\_0@{tau\_d\_0}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{tau\_d\_0}{tau\_d\_0}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::tau\+\_\+d\+\_\+0 =1.\+0e22}
+
+Reptation time for the zeroth mode; initialized to a large number \mbox{\Hypertarget{class_c___l_poly_a92496e2543e518edb7dc3483711702cf}\label{class_c___l_poly_a92496e2543e518edb7dc3483711702cf}} 
+\index{C\_LPoly@{C\_LPoly}!wt@{wt}}
+\index{wt@{wt}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{wt}{wt}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::wt =0.\+0}
+
+Weight fraction associated with the polymer in the ensemble \mbox{\Hypertarget{class_c___l_poly_a880bdefd9a6e382010951b382ca4ccc3}\label{class_c___l_poly_a880bdefd9a6e382010951b382ca4ccc3}} 
+\index{C\_LPoly@{C\_LPoly}!z@{z}}
+\index{z@{z}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::z =0.\+0}
+
+Escaped number of entanglements from either ends of the chain at current time \mbox{\Hypertarget{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}\label{class_c___l_poly_a661a2dd0aa3b80ce755f682a637d1c75}} 
+\index{C\_LPoly@{C\_LPoly}!Z\_chain@{Z\_chain}}
+\index{Z\_chain@{Z\_chain}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{Z\_chain}{Z\_chain}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::\+Z\+\_\+chain =0.\+0}
+
+Number of entanglements in the chain. Z\+\_\+chain=mass/\+M\+\_\+e \mbox{\Hypertarget{class_c___l_poly_a467d8303f563a2b2935ed3e0428e5942}\label{class_c___l_poly_a467d8303f563a2b2935ed3e0428e5942}} 
+\index{C\_LPoly@{C\_LPoly}!Z\_rept@{Z\_rept}}
+\index{Z\_rept@{Z\_rept}!C\_LPoly@{C\_LPoly}}
+\doxysubsubsection{\texorpdfstring{Z\_rept}{Z\_rept}}
+{\footnotesize\ttfamily double C\+\_\+\+LPoly\+::\+Z\+\_\+rept =0.\+0}
+
+Amount of chain that should relax by reptation 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_l_p2_r_8h}{LP2\+R.\+h}}\end{DoxyCompactItemize}

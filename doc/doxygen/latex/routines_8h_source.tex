@@ -1,0 +1,43 @@
+\hypertarget{routines_8h_source}{}\doxysection{routines.\+h}
+\label{routines_8h_source}\index{include/routines.h@{include/routines.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{keywordtype}{int} \mbox{\hyperlink{parse__arg_8cpp_a519ae5b06fbc19352378c3ec4465f255}{parse\_arg}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[]);}
+\DoxyCodeLine{2 \textcolor{keywordtype}{void} \mbox{\hyperlink{_read_r_c_f_l_8cpp_aa51b7d3c2c1c0e3a95c363d098890f88}{ReadRCFL}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{3 \textcolor{keywordtype}{int} ReadInput(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keywordtype}{int} \mbox{\hyperlink{gen_poly_lin_8cpp_a848f423e17b88824500ac42bca5e7b74}{genPolyLin}}(std::fstream\&);}
+\DoxyCodeLine{6 \textcolor{keywordtype}{double} \mbox{\hyperlink{_gen_lin_log_normal_8cpp_aa0de7945d4aa5d46d1bbaf44e0c3b2c6}{aaerfcc}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} x);}
+\DoxyCodeLine{7 \textcolor{keywordtype}{void} \mbox{\hyperlink{_gen_lin_log_normal_8cpp_a341e1c95f74c9ee434b2f44ff3a1e2d3}{GenLinLogNormal}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} n, \textcolor{keyword}{const} \textcolor{keywordtype}{double} mw, \textcolor{keyword}{const} \textcolor{keywordtype}{double} pdi, \textcolor{keyword}{const} \textcolor{keywordtype}{double} wtcomp);}
+\DoxyCodeLine{8 \textcolor{keywordtype}{int} \mbox{\hyperlink{_gen_lin_g_p_c_8cpp_a0410e6d196b5b9298422da177d22ba34}{GenLinGPC}}(std::string \&fname, \textcolor{keyword}{const} \textcolor{keywordtype}{double} wtcomp);}
+\DoxyCodeLine{9 \textcolor{keywordtype}{int} GenLinWt(std::string \&fname, \textcolor{keyword}{const} \textcolor{keywordtype}{double} wtcomp);}
+\DoxyCodeLine{10 \textcolor{keywordtype}{void} assign\_FNMs(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 std::istream\& \mbox{\hyperlink{safe_get_line_8cpp_a027dd17a6eab280cf0f3ece00c89480f}{safeGetline}}(std::istream\& is, std::string\& t);}
+\DoxyCodeLine{13 std::istream\& \mbox{\hyperlink{safe_get_line_8cpp_a5613b9541b68f10aba859310064c754d}{readEquality}}(std::istream\& is, std::string\& sL, std::string\& sR);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// relaxation}}
+\DoxyCodeLine{16 \textcolor{keywordtype}{double} GetPhiEq(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{17 \textcolor{keywordtype}{void} frac\_unrelaxed(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{18 \textcolor{keywordtype}{void} try\_reptate(\textcolor{keyword}{const} \textcolor{keywordtype}{int} np);}
+\DoxyCodeLine{19 \textcolor{keywordtype}{void} arm\_retraction(\textcolor{keyword}{const} \textcolor{keywordtype}{int} np, \textcolor{keyword}{const} \textcolor{keywordtype}{int} indx);}
+\DoxyCodeLine{20 \textcolor{keywordtype}{int} time\_step(\textcolor{keyword}{const} \textcolor{keywordtype}{int} indx);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{// Calculation of responses}}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} add\_spectra\_headers(std::fstream \&fRh, std::fstream \&fDi);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} \mbox{\hyperlink{_g_star_glass_8cpp_a08989ea7a04d74a5b107061bb1a97ba7}{GStarGlass}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} w, \textcolor{keywordtype}{double} \&gp, \textcolor{keywordtype}{double} \&g2p);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{void} GStarRouse(\textcolor{keywordtype}{double} freq, \textcolor{keywordtype}{double} \&gRs, \textcolor{keywordtype}{double} \&g2Rs, \textcolor{keywordtype}{double} \&eRs, \textcolor{keywordtype}{double} \&e2Rs);}
+\DoxyCodeLine{26 \textcolor{keywordtype}{void} GStarFastRouse(\textcolor{keyword}{const} \textcolor{keywordtype}{double} w, \textcolor{keywordtype}{double} \&gpf, \textcolor{keywordtype}{double} \&g2pf);}
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} \mbox{\hyperlink{_g_star_slow_8cpp_ad11f35cb2b4e432441aaa99c7a1ab600}{GStarSlow}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} w, \textcolor{keywordtype}{double} \&gp, \textcolor{keywordtype}{double} \&g2p, \textcolor{keywordtype}{double} \&ep, \textcolor{keywordtype}{double} \&e2p);}
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} CalcGstar(std::fstream \&fRh, std::fstream \&fDi);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keywordtype}{double} \mbox{\hyperlink{_calc_visc_8cpp_a374902144454c699de293062a5e88cbd}{CalcVisc}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} add\_goft\_headers(std::fstream \&fRh);}
+\DoxyCodeLine{32 \textcolor{keywordtype}{double} GoftRouse(\textcolor{keyword}{const} \textcolor{keywordtype}{double} t);}
+\DoxyCodeLine{33 \textcolor{keywordtype}{double} GoftFast(\textcolor{keyword}{const} \textcolor{keywordtype}{double} t);}
+\DoxyCodeLine{34 \textcolor{keywordtype}{double} GoftTube(\textcolor{keyword}{const} \textcolor{keywordtype}{double} t, \textcolor{keywordtype}{double} \&muoft, \textcolor{keywordtype}{double} \&Roft);}
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} Calc\_goft(std::fstream \&fRh);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} LinRheology(\textcolor{keywordtype}{void});}
+
+\end{DoxyCode}

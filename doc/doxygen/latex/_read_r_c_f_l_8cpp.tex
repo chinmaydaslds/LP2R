@@ -1,0 +1,57 @@
+\hypertarget{_read_r_c_f_l_8cpp}{}\doxysection{prep/\+Read\+RCFL.cpp File Reference}
+\label{_read_r_c_f_l_8cpp}\index{prep/ReadRCFL.cpp@{prep/ReadRCFL.cpp}}
+
+
+Read options given as option=value pair in a file.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_read_r_c_f_l_8cpp_a3e0cce394bcc73afd54e0376316713ef}{assign\+\_\+\+RHS\+\_\+bool}} (std\+::string \&sR)
+\item 
+void \mbox{\hyperlink{_read_r_c_f_l_8cpp_a8c940134af64bfaa8239b58d1edd254b}{assign\+\_\+\+RC\+\_\+dbl}} (double \&param, const std\+::string \&sR, const std\+::string sprm, const double val)
+\item 
+void \mbox{\hyperlink{_read_r_c_f_l_8cpp_aa51b7d3c2c1c0e3a95c363d098890f88}{Read\+RCFL}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Read options given as option=value pair in a file. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_read_r_c_f_l_8cpp_a8c940134af64bfaa8239b58d1edd254b}\label{_read_r_c_f_l_8cpp_a8c940134af64bfaa8239b58d1edd254b}} 
+\index{ReadRCFL.cpp@{ReadRCFL.cpp}!assign\_RC\_dbl@{assign\_RC\_dbl}}
+\index{assign\_RC\_dbl@{assign\_RC\_dbl}!ReadRCFL.cpp@{ReadRCFL.cpp}}
+\doxysubsubsection{\texorpdfstring{assign\_RC\_dbl()}{assign\_RC\_dbl()}}
+{\footnotesize\ttfamily void assign\+\_\+\+RC\+\_\+dbl (\begin{DoxyParamCaption}\item[{double \&}]{param,  }\item[{const std\+::string \&}]{sR,  }\item[{const std\+::string}]{sprm,  }\item[{const double}]{val }\end{DoxyParamCaption})}
+
+Try to assign double equivalent value of sR to param (repeated as string sprm). If it fails, it will assign the default value val (repeated as string sval).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em param} & parameter value represented in string sR \\
+\hline
+\mbox{\texttt{ in}}  & {\em sR} & string object representing some double \\
+\hline
+\mbox{\texttt{ in}}  & {\em sprm} & Name of the parameter we are trying to assign \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & default value of the parameter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_read_r_c_f_l_8cpp_a3e0cce394bcc73afd54e0376316713ef}\label{_read_r_c_f_l_8cpp_a3e0cce394bcc73afd54e0376316713ef}} 
+\index{ReadRCFL.cpp@{ReadRCFL.cpp}!assign\_RHS\_bool@{assign\_RHS\_bool}}
+\index{assign\_RHS\_bool@{assign\_RHS\_bool}!ReadRCFL.cpp@{ReadRCFL.cpp}}
+\doxysubsubsection{\texorpdfstring{assign\_RHS\_bool()}{assign\_RHS\_bool()}}
+{\footnotesize\ttfamily bool assign\+\_\+\+RHS\+\_\+bool (\begin{DoxyParamCaption}\item[{std\+::string \&}]{sR }\end{DoxyParamCaption})}
+
+return {\ttfamily true} if string sR==\char`\"{}yes\char`\"{} \mbox{\Hypertarget{_read_r_c_f_l_8cpp_aa51b7d3c2c1c0e3a95c363d098890f88}\label{_read_r_c_f_l_8cpp_aa51b7d3c2c1c0e3a95c363d098890f88}} 
+\index{ReadRCFL.cpp@{ReadRCFL.cpp}!ReadRCFL@{ReadRCFL}}
+\index{ReadRCFL@{ReadRCFL}!ReadRCFL.cpp@{ReadRCFL.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadRCFL()}{ReadRCFL()}}
+{\footnotesize\ttfamily void Read\+RCFL (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+(If present) read resource file Ignore anything that does not make sense 

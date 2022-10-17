@@ -1,0 +1,81 @@
+\hypertarget{safe_get_line_8cpp}{}\doxysection{util/safe\+Get\+Line.cpp File Reference}
+\label{safe_get_line_8cpp}\index{util/safeGetLine.cpp@{util/safeGetLine.cpp}}
+
+
+read a nonempty line with either unix or windows style line-\/ending, discarding anything after a \% sign  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{safe_get_line_8cpp_a7f6edf052514014295ea19967caf8597}{safe\+Getline\+\_\+int}} (std\+::istream \&is, std\+::string \&t)
+\item 
+std\+::istream \& \mbox{\hyperlink{safe_get_line_8cpp_a027dd17a6eab280cf0f3ece00c89480f}{safe\+Getline}} (std\+::istream \&is, std\+::string \&t)
+\item 
+std\+::istream \& \mbox{\hyperlink{safe_get_line_8cpp_a5613b9541b68f10aba859310064c754d}{read\+Equality}} (std\+::istream \&is, std\+::string \&sL, std\+::string \&sR)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+read a nonempty line with either unix or windows style line-\/ending, discarding anything after a \% sign 
+
+handle line ending with \textbackslash{}n, \textbackslash{}r, \textbackslash{}r\textbackslash{}n, or no line ending 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{safe_get_line_8cpp_a5613b9541b68f10aba859310064c754d}\label{safe_get_line_8cpp_a5613b9541b68f10aba859310064c754d}} 
+\index{safeGetLine.cpp@{safeGetLine.cpp}!readEquality@{readEquality}}
+\index{readEquality@{readEquality}!safeGetLine.cpp@{safeGetLine.cpp}}
+\doxysubsubsection{\texorpdfstring{readEquality()}{readEquality()}}
+{\footnotesize\ttfamily std\+::istream \& read\+Equality (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{std\+::string \&}]{sL,  }\item[{std\+::string \&}]{sR }\end{DoxyParamCaption})}
+
+Read lines with contents like a=b On either side of the equality, space or tabs are removed return the LHS and RHS separately in sL and sR
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em is} & input stream \\
+\hline
+\mbox{\texttt{ out}}  & {\em sL} & string containing LHS of some equality \\
+\hline
+\mbox{\texttt{ out}}  & {\em sR} & string containing RHS of some equality \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{safe_get_line_8cpp_a027dd17a6eab280cf0f3ece00c89480f}\label{safe_get_line_8cpp_a027dd17a6eab280cf0f3ece00c89480f}} 
+\index{safeGetLine.cpp@{safeGetLine.cpp}!safeGetline@{safeGetline}}
+\index{safeGetline@{safeGetline}!safeGetLine.cpp@{safeGetLine.cpp}}
+\doxysubsubsection{\texorpdfstring{safeGetline()}{safeGetline()}}
+{\footnotesize\ttfamily std\+::istream \& safe\+Getline (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{std\+::string \&}]{t }\end{DoxyParamCaption})}
+
+Read a line from the input stream, discard anything after a \textquotesingle{}\textquotesingle{} sign (treat as comment indicator) If the resulting string has no non-\/space characters and the input stream hasn\textquotesingle{}t reached the end of file, read the next line. Continue till either the end of file is reached, or a line with some non-\/empty, non-\/comment character is found.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em is} & input stream \\
+\hline
+\mbox{\texttt{ out}}  & {\em t} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{safe_get_line_8cpp_a7f6edf052514014295ea19967caf8597}\label{safe_get_line_8cpp_a7f6edf052514014295ea19967caf8597}} 
+\index{safeGetLine.cpp@{safeGetLine.cpp}!safeGetline\_int@{safeGetline\_int}}
+\index{safeGetline\_int@{safeGetline\_int}!safeGetLine.cpp@{safeGetLine.cpp}}
+\doxysubsubsection{\texorpdfstring{safeGetline\_int()}{safeGetline\_int()}}
+{\footnotesize\ttfamily std\+::istream \& safe\+Getline\+\_\+int (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{std\+::string \&}]{t }\end{DoxyParamCaption})}
+
+Implementation of getline() to handle different line endings. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em is} & input stream \\
+\hline
+\mbox{\texttt{ out}}  & {\em t} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input stream 
+\end{DoxyReturn}

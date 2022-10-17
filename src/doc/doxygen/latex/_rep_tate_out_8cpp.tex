@@ -1,0 +1,95 @@
+\hypertarget{_rep_tate_out_8cpp}{}\doxysection{Rheology/\+Rep\+Tate\+Out.cpp File Reference}
+\label{_rep_tate_out_8cpp}\index{Rheology/RepTateOut.cpp@{Rheology/RepTateOut.cpp}}
+
+
+Handle output in Rep\+Tate format.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_rep_tate_out_8cpp_ac43ae98d897125dcd6bf94dbd6bc21c0}{Rep\+Tate\+Open}} (std\+::fstream \&f\+Rh, std\+::fstream \&f\+Di)
+\begin{DoxyCompactList}\small\item\em Open files for Reptate format and add headers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rep_tate_out_8cpp_ac7780872cc9ee2230f7288f13cb305ed}{Rep\+Tate\+Write}} (std\+::fstream \&f\+Rh, std\+::fstream \&f\+Di, const double(\&res)\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em write relaxation data in Rep\+Tate format \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rep_tate_out_8cpp_a4f095126fee9c5cba83d4297a7d16692}{CSVOpen}} (std\+::fstream \&f\+Rh)
+\begin{DoxyCompactList}\small\item\em Open file for CSV format and add headers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rep_tate_out_8cpp_ab4f21b16809604671a8a287db8056e0f}{CSVWrite}} (std\+::fstream \&f\+Rh, const double(\&res)\mbox{[}5\mbox{]})
+\begin{DoxyCompactList}\small\item\em write relaxation data in CSV file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handle output in Rep\+Tate format. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_rep_tate_out_8cpp_a4f095126fee9c5cba83d4297a7d16692}\label{_rep_tate_out_8cpp_a4f095126fee9c5cba83d4297a7d16692}} 
+\index{RepTateOut.cpp@{RepTateOut.cpp}!CSVOpen@{CSVOpen}}
+\index{CSVOpen@{CSVOpen}!RepTateOut.cpp@{RepTateOut.cpp}}
+\doxysubsubsection{\texorpdfstring{CSVOpen()}{CSVOpen()}}
+{\footnotesize\ttfamily void CSVOpen (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{f\+Rh }\end{DoxyParamCaption})}
+
+
+
+Open file for CSV format and add headers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em f\+Rh} & \+: file for mechanical spectra output \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rep_tate_out_8cpp_ab4f21b16809604671a8a287db8056e0f}\label{_rep_tate_out_8cpp_ab4f21b16809604671a8a287db8056e0f}} 
+\index{RepTateOut.cpp@{RepTateOut.cpp}!CSVWrite@{CSVWrite}}
+\index{CSVWrite@{CSVWrite}!RepTateOut.cpp@{RepTateOut.cpp}}
+\doxysubsubsection{\texorpdfstring{CSVWrite()}{CSVWrite()}}
+{\footnotesize\ttfamily void CSVWrite (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{f\+Rh,  }\item[{const double(\&)}]{res\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+write relaxation data in CSV file 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f\+Rh} & \+: file for relaxation spectra output \\
+\hline
+\mbox{\texttt{ in}}  & {\em res} & \+: fixed length array containing w, G\textquotesingle{}, G\char`\"{}, and possibly e\textquotesingle{}, e\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rep_tate_out_8cpp_ac43ae98d897125dcd6bf94dbd6bc21c0}\label{_rep_tate_out_8cpp_ac43ae98d897125dcd6bf94dbd6bc21c0}} 
+\index{RepTateOut.cpp@{RepTateOut.cpp}!RepTateOpen@{RepTateOpen}}
+\index{RepTateOpen@{RepTateOpen}!RepTateOut.cpp@{RepTateOut.cpp}}
+\doxysubsubsection{\texorpdfstring{RepTateOpen()}{RepTateOpen()}}
+{\footnotesize\ttfamily void Rep\+Tate\+Open (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{f\+Rh,  }\item[{std\+::fstream \&}]{f\+Di }\end{DoxyParamCaption})}
+
+
+
+Open files for Reptate format and add headers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em f\+Rh} & \+: file for mechanical spectra output \\
+\hline
+\mbox{\texttt{ out}}  & {\em f\+Di} & \+: file for Dielectric spectra output \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rep_tate_out_8cpp_ac7780872cc9ee2230f7288f13cb305ed}\label{_rep_tate_out_8cpp_ac7780872cc9ee2230f7288f13cb305ed}} 
+\index{RepTateOut.cpp@{RepTateOut.cpp}!RepTateWrite@{RepTateWrite}}
+\index{RepTateWrite@{RepTateWrite}!RepTateOut.cpp@{RepTateOut.cpp}}
+\doxysubsubsection{\texorpdfstring{RepTateWrite()}{RepTateWrite()}}
+{\footnotesize\ttfamily void Rep\+Tate\+Write (\begin{DoxyParamCaption}\item[{std\+::fstream \&}]{f\+Rh,  }\item[{std\+::fstream \&}]{f\+Di,  }\item[{const double(\&)}]{res\mbox{[}5\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+write relaxation data in Rep\+Tate format 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f\+Rh} & \+: file for mechanical spectra output \\
+\hline
+\mbox{\texttt{ in}}  & {\em f\+Di} & \+: file for Dielectric spectra output \\
+\hline
+\mbox{\texttt{ in}}  & {\em res} & \+: fixed length array containing w, G\textquotesingle{}, G\char`\"{}, and possibly e\textquotesingle{}, e\char`\"{} \\
+\hline
+\end{DoxyParams}

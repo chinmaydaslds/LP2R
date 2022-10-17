@@ -1,0 +1,55 @@
+\hypertarget{_gen_lin_g_p_c_8cpp}{}\doxysection{prep/\+Gen\+Lin\+GPC.cpp File Reference}
+\label{_gen_lin_g_p_c_8cpp}\index{prep/GenLinGPC.cpp@{prep/GenLinGPC.cpp}}
+
+
+Generate polymers based on GPC data from a file.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_gen_lin_g_p_c_8cpp_a381a4208f5bebc0e925a1957be3714fd}{aa\+\_\+sort2\+\_\+minmax}} (std\+::vector$<$ double $>$ \&m, std\+::vector$<$ double $>$ \&p)
+\item 
+int \mbox{\hyperlink{_gen_lin_g_p_c_8cpp_a0410e6d196b5b9298422da177d22ba34}{Gen\+Lin\+GPC}} (std\+::string \&fname, const double wtcomp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generate polymers based on GPC data from a file. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_gen_lin_g_p_c_8cpp_a381a4208f5bebc0e925a1957be3714fd}\label{_gen_lin_g_p_c_8cpp_a381a4208f5bebc0e925a1957be3714fd}} 
+\index{GenLinGPC.cpp@{GenLinGPC.cpp}!aa\_sort2\_minmax@{aa\_sort2\_minmax}}
+\index{aa\_sort2\_minmax@{aa\_sort2\_minmax}!GenLinGPC.cpp@{GenLinGPC.cpp}}
+\doxysubsubsection{\texorpdfstring{aa\_sort2\_minmax()}{aa\_sort2\_minmax()}}
+{\footnotesize\ttfamily void aa\+\_\+sort2\+\_\+minmax (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{m,  }\item[{std\+::vector$<$ double $>$ \&}]{p }\end{DoxyParamCaption})}
+
+sort paired vectors in ascending order of the first 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em m} & molar mass \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em p} & dwdm associated with m \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gen_lin_g_p_c_8cpp_a0410e6d196b5b9298422da177d22ba34}\label{_gen_lin_g_p_c_8cpp_a0410e6d196b5b9298422da177d22ba34}} 
+\index{GenLinGPC.cpp@{GenLinGPC.cpp}!GenLinGPC@{GenLinGPC}}
+\index{GenLinGPC@{GenLinGPC}!GenLinGPC.cpp@{GenLinGPC.cpp}}
+\doxysubsubsection{\texorpdfstring{GenLinGPC()}{GenLinGPC()}}
+{\footnotesize\ttfamily int Gen\+Lin\+GPC (\begin{DoxyParamCaption}\item[{std\+::string \&}]{fname,  }\item[{const double}]{wtcomp }\end{DoxyParamCaption})}
+
+GPC data in \{M, dw/dlog\+\_\+10(M)\} format in the specified file As with all other files, comments are allowed with a \char`\"{}\%\char`\"{} symbol
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em fname} & string containing the filename \\
+\hline
+\mbox{\texttt{ in}}  & {\em wtcomp} & weight fraction assigned to the current component \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+zero if successful 
+\end{DoxyReturn}

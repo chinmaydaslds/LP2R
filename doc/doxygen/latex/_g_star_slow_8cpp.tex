@@ -1,0 +1,71 @@
+\hypertarget{_g_star_slow_8cpp}{}\doxysection{Rheology/\+GStar\+Slow.cpp File Reference}
+\label{_g_star_slow_8cpp}\index{Rheology/GStarSlow.cpp@{Rheology/GStarSlow.cpp}}
+
+
+Tube relaxation part of relaxation.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_g_star_slow_8cpp_ac9d50dab0e4494288b5b3d1e0694083a}{symbint}} (const double tk, const double td, const double w, double \&rint1, double \&rint2)
+\begin{DoxyCompactList}\small\item\em analytical result from extending R(t) to time infinity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_g_star_slow_8cpp_ad11f35cb2b4e432441aaa99c7a1ab600}{GStar\+Slow}} (const double w, double \&gp, double \&g2p, double \&ep, double \&e2p)
+\begin{DoxyCompactList}\small\item\em Calculate tube escape contrubution to relaxation moduli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tube relaxation part of relaxation. 
+
+Given some frequency w, returns G\textquotesingle{}(w), G\char`\"{}(w), epsilon\textquotesingle{}(w), epsilon\char`\"{}(w)
+
+Assume G(t)/\+G\+\_\+0 = mu(t) R(t), with mu and R determined by exponential weighted integral of changes in phi and phi\+\_\+\+ST
+
+R(t) is slowly relaxing. Extend R(t) to infinity analytically.
+
+Dielectric relaxation is considered to be proportional to mu(t) 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_g_star_slow_8cpp_ad11f35cb2b4e432441aaa99c7a1ab600}\label{_g_star_slow_8cpp_ad11f35cb2b4e432441aaa99c7a1ab600}} 
+\index{GStarSlow.cpp@{GStarSlow.cpp}!GStarSlow@{GStarSlow}}
+\index{GStarSlow@{GStarSlow}!GStarSlow.cpp@{GStarSlow.cpp}}
+\doxysubsubsection{\texorpdfstring{GStarSlow()}{GStarSlow()}}
+{\footnotesize\ttfamily void GStar\+Slow (\begin{DoxyParamCaption}\item[{const double}]{w,  }\item[{double \&}]{gp,  }\item[{double \&}]{g2p,  }\item[{double \&}]{ep,  }\item[{double \&}]{e2p }\end{DoxyParamCaption})}
+
+
+
+Calculate tube escape contrubution to relaxation moduli. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em w} & \+: frequency at which result is required \\
+\hline
+\mbox{\texttt{ out}}  & {\em gp} & \+: elastic modulus G\textquotesingle{} \\
+\hline
+\mbox{\texttt{ out}}  & {\em g2p} & \+: viscous modulus G\char`\"{} @param \mbox{[}out\mbox{]} ep \+: dielectric storage modulus epsilon\textquotesingle{} @param \mbox{[}out\mbox{]} e2p \+: dielectric loss modulus epsilon\char`\"{} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_g_star_slow_8cpp_ac9d50dab0e4494288b5b3d1e0694083a}\label{_g_star_slow_8cpp_ac9d50dab0e4494288b5b3d1e0694083a}} 
+\index{GStarSlow.cpp@{GStarSlow.cpp}!symbint@{symbint}}
+\index{symbint@{symbint}!GStarSlow.cpp@{GStarSlow.cpp}}
+\doxysubsubsection{\texorpdfstring{symbint()}{symbint()}}
+{\footnotesize\ttfamily void symbint (\begin{DoxyParamCaption}\item[{const double}]{tk,  }\item[{const double}]{td,  }\item[{const double}]{w,  }\item[{double \&}]{rint1,  }\item[{double \&}]{rint2 }\end{DoxyParamCaption})}
+
+
+
+analytical result from extending R(t) to time infinity. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tk} & \+: discrete time interval at which contribution from the integral is sought. \\
+\hline
+\mbox{\texttt{ in}}  & {\em td} & \+: time at which mu(t) first goes to zero \\
+\hline
+\mbox{\texttt{ in}}  & {\em w} & \+: frequency \\
+\hline
+\mbox{\texttt{ out}}  & {\em rint1} & \+: int( (a+x)/((a+x)$^\wedge$2 + b x$^\wedge$2) dx/sqrt(x), x=1..inf); I2(a,b) in Eqn B6 in the manuscript \\
+\hline
+\mbox{\texttt{ out}}  & {\em rint2} & \+: int( sqrt(x)/((a+x)$^\wedge$2 + b x$^\wedge$2) dx, x=1..inf); I1(a,b) in Eqn B7 in the manuscript \\
+\hline
+\end{DoxyParams}

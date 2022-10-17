@@ -1,0 +1,80 @@
+\hypertarget{_gen_lin_log_normal_8cpp}{}\doxysection{prep/\+Gen\+Lin\+Log\+Normal.cpp File Reference}
+\label{_gen_lin_log_normal_8cpp}\index{prep/GenLinLogNormal.cpp@{prep/GenLinLogNormal.cpp}}
+
+
+Generate discrete representation of a log\+Normal distribution.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_gen_lin_log_normal_8cpp_aa0de7945d4aa5d46d1bbaf44e0c3b2c6}{aaerfcc}} (const double x)
+\item 
+double \mbox{\hyperlink{_gen_lin_log_normal_8cpp_a057c95a5898f7750b752ebf4303d200d}{Log\+Normal\+Wt}} (const double Mw, const double PDI, const double M1, const double M2, double \&Mw\+Bin)
+\item 
+void \mbox{\hyperlink{_gen_lin_log_normal_8cpp_a341e1c95f74c9ee434b2f44ff3a1e2d3}{Gen\+Lin\+Log\+Normal}} (const int n, const double mw, const double pdi, const double wtcomp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generate discrete representation of a log\+Normal distribution. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_gen_lin_log_normal_8cpp_aa0de7945d4aa5d46d1bbaf44e0c3b2c6}\label{_gen_lin_log_normal_8cpp_aa0de7945d4aa5d46d1bbaf44e0c3b2c6}} 
+\index{GenLinLogNormal.cpp@{GenLinLogNormal.cpp}!aaerfcc@{aaerfcc}}
+\index{aaerfcc@{aaerfcc}!GenLinLogNormal.cpp@{GenLinLogNormal.cpp}}
+\doxysubsubsection{\texorpdfstring{aaerfcc()}{aaerfcc()}}
+{\footnotesize\ttfamily double aaerfcc (\begin{DoxyParamCaption}\item[{const double}]{x }\end{DoxyParamCaption})}
+
+Series for complementary error function 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+errc(x) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_gen_lin_log_normal_8cpp_a341e1c95f74c9ee434b2f44ff3a1e2d3}\label{_gen_lin_log_normal_8cpp_a341e1c95f74c9ee434b2f44ff3a1e2d3}} 
+\index{GenLinLogNormal.cpp@{GenLinLogNormal.cpp}!GenLinLogNormal@{GenLinLogNormal}}
+\index{GenLinLogNormal@{GenLinLogNormal}!GenLinLogNormal.cpp@{GenLinLogNormal.cpp}}
+\doxysubsubsection{\texorpdfstring{GenLinLogNormal()}{GenLinLogNormal()}}
+{\footnotesize\ttfamily void Gen\+Lin\+Log\+Normal (\begin{DoxyParamCaption}\item[{const int}]{n,  }\item[{const double}]{mw,  }\item[{const double}]{pdi,  }\item[{const double}]{wtcomp }\end{DoxyParamCaption})}
+
+Generate polymers from a log\+Normal distribution characterized by molar mass mw and PDI pdi.~\newline
+Special case\+: if either the number of discrete molar mass is one or PDI \texorpdfstring{$<$}{<} 1, create a single polymer with the molar mass supplied. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & number of discrete molar mass to represent the distribution \\
+\hline
+\mbox{\texttt{ in}}  & {\em mw} & weight averaged molar mass \\
+\hline
+\mbox{\texttt{ in}}  & {\em pdi} & Polydispersity index \\
+\hline
+\mbox{\texttt{ in}}  & {\em wtcomp} & weight fraction of this polymer componennt \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_gen_lin_log_normal_8cpp_a057c95a5898f7750b752ebf4303d200d}\label{_gen_lin_log_normal_8cpp_a057c95a5898f7750b752ebf4303d200d}} 
+\index{GenLinLogNormal.cpp@{GenLinLogNormal.cpp}!LogNormalWt@{LogNormalWt}}
+\index{LogNormalWt@{LogNormalWt}!GenLinLogNormal.cpp@{GenLinLogNormal.cpp}}
+\doxysubsubsection{\texorpdfstring{LogNormalWt()}{LogNormalWt()}}
+{\footnotesize\ttfamily double Log\+Normal\+Wt (\begin{DoxyParamCaption}\item[{const double}]{Mw,  }\item[{const double}]{PDI,  }\item[{const double}]{M1,  }\item[{const double}]{M2,  }\item[{double \&}]{Mw\+Bin }\end{DoxyParamCaption})}
+
+Weight fraction in a specified molar mass range from a log\+Normal distribution 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mw} & weight-\/averaged molar mass \\
+\hline
+\mbox{\texttt{ in}}  & {\em PDI} & Polydispersity index \\
+\hline
+\mbox{\texttt{ in}}  & {\em M1} & Lower limit of the molar mass range \\
+\hline
+\mbox{\texttt{ in}}  & {\em M2} & upper limit of the molar mass range \\
+\hline
+\mbox{\texttt{ out}}  & {\em Mw\+Bin} & weight averaged molar mass in this interval \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+weight fraction in the molar mass range.
+\end{DoxyReturn}
+Negative M1 ==\texorpdfstring{$>$}{>} (0, M2); Negative M2 ==\texorpdfstring{$>$}{>} (M1, infinity) 

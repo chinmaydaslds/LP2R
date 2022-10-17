@@ -1,0 +1,34 @@
+\hypertarget{_g_star_glass_8cpp}{}\doxysection{Rheology/\+GStar\+Glass.cpp File Reference}
+\label{_g_star_glass_8cpp}\index{Rheology/GStarGlass.cpp@{Rheology/GStarGlass.cpp}}
+
+
+Return glassy contribution of G\textquotesingle{} and G"{} at given frequency.  
+
+
+{\ttfamily \#include \char`\"{}../include/\+LP2\+R.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_g_star_glass_8cpp_ae70b4ba400404c711fdb00c517790d59}\label{_g_star_glass_8cpp_ae70b4ba400404c711fdb00c517790d59}} 
+double {\bfseries kwws} (const double, const double)
+\item 
+\mbox{\Hypertarget{_g_star_glass_8cpp_a3d93804c2232f4c04a0e239bf46da445}\label{_g_star_glass_8cpp_a3d93804c2232f4c04a0e239bf46da445}} 
+double {\bfseries kwwc} (const double, const double)
+\item 
+void \mbox{\hyperlink{_g_star_glass_8cpp_a08989ea7a04d74a5b107061bb1a97ba7}{GStar\+Glass}} (const double w, double \&gp, double \&g2p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Return glassy contribution of G\textquotesingle{} and G"{} at given frequency. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_g_star_glass_8cpp_a08989ea7a04d74a5b107061bb1a97ba7}\label{_g_star_glass_8cpp_a08989ea7a04d74a5b107061bb1a97ba7}} 
+\index{GStarGlass.cpp@{GStarGlass.cpp}!GStarGlass@{GStarGlass}}
+\index{GStarGlass@{GStarGlass}!GStarGlass.cpp@{GStarGlass.cpp}}
+\doxysubsubsection{\texorpdfstring{GStarGlass()}{GStarGlass()}}
+{\footnotesize\ttfamily void GStar\+Glass (\begin{DoxyParamCaption}\item[{const double}]{w,  }\item[{double \&}]{gp,  }\item[{double \&}]{g2p }\end{DoxyParamCaption})}
+
+Glassy contribution to G\textquotesingle{} and G\char`\"{}   \+Used kww.\+c from Wuttke, Algorithms 5, 604-\/628 (2012), doi\+:10.\+3390/a5040604  @param \mbox{[}in\mbox{]} w frequency of interest @param \mbox{[}out\mbox{]} gp Glassy contribution in storage modulus G\textquotesingle{}(w)  @param \mbox{[}out\mbox{]} g2p Glassy contribution in loss modulus G\char`\"{}(w) 
