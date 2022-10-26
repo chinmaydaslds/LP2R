@@ -10,7 +10,7 @@ Version 1.0
 
 ###Availability
 
-The source code is available here. For detailed documentation use an web browser to open [index.html](https://chinmaydaslds/github.io/LP2R/) in LP2R/doc/doxygen/html/ subdirectory of the source.
+The source code is available here. For detailed documentation use an web browser to open [index.html](https://chinmaydaslds.github.io/LP2R/) in LP2R/doc/doxygen/html/ subdirectory of the source.
 
 
 A precompiled windows executable is available at [google drive](https://drive.google.com/file/d/1gO2Z3UWPi1zeLnvmpjs5II3OA2hJrPla/view?usp=sharing)
