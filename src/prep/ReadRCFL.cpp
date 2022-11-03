@@ -104,6 +104,9 @@ while(!readEquality(f1,sL,sR).eof()){
    if(sR.size() > 0){has_chem=true; reptate_chem=sR;}
                      }
   else if(sL=="Temp"){has_temp=true; assign_RC_dbl(reptate_temp, sR, "Temperature", 0.0);}
+  else if(sL=="ret_pref_0"){assign_RC_dbl(ret_pref_0, sR, "ret_pref_0", 0.020);}
+  else if(sL=="ret_switch_exponent"){assign_RC_dbl(ret_switch_exponent, sR, "ret_switch_exponent", 0.42);}
+  else if(sL=="Disentanglement_Switch"){assign_RC_dbl(Disentanglement_Switch, sR, "Disentanglement_Switch", 1.0);}
  else{
   if(GenLogFL){ f_Log << std::endl << "Ignoring unresolved statement in rc file " 
           << rcFNM << ":" << std::endl;
