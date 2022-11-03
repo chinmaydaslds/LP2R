@@ -6,9 +6,9 @@
 
 <HR> 
   * \section sec_intro Introduction 
-The code in this depository accompanies our paper <em>"A tube model for predicting the stress and dielectric
-relaxations of polydisperse linear polymers"</em> submitted to <em>Journal of Rheology</em> (2022). This 
-implements modern ideas about how constraint release and tube escape modes in linear polymer melts affect each other
+The code in this depository accompanies our paper <A HREF="https://chinmaydaslds.github.io/LP2R/manuscript/Das_Read_LP2R.pdf"> <em>"A tube model for predicting the stress and dielectric
+relaxations of polydisperse linear polymers"</em> </A> submitted to <em>Journal of Rheology</em> (2022). 
+This implements modern ideas about how constraint release and tube escape modes in linear polymer melts affect each other
 in a numerical code to predict linear respose in arbitrarily polydisperse linear polymers. The information about the
 polymers can be supplied as moments of a distribution, or as data files containing gel permeation chromatography measurements (GPC), or a set of discrete molar masses and associated weight fractions. Arbitrarily complex blends can be designed by adding several such components. Besides the mechanical relaxation moduli, the code also can calculate dielectric
 relaxation for type-A polymers (polymers with monomer dipole moments aligned along the chain backbone). With appropriate
@@ -17,7 +17,7 @@ molar mass chain will undergo the terminal relaxation.
 
 The code is available for download from <A HREF="https://github.com/chinmaydaslds/LP2R"> github</A>. On UNIX/Linux
 systems, you can use <em> make</em> command from <em> LP2R/src/obj </em> subdirectory to create the executable. 
-A precompiled windows executable is available from <A HREF="https://drive.google.com/file/d/1gO2Z3UWPi1zeLnvmpjs5II3OA2hJrPla/view?usp=sharing"> google drive</A>. A snapshot of the code
+A precompiled windows executable is available from <A HREF="https://drive.google.com/file/d/1gO2Z3UWPi1zeLnvmpjs5II3OA2hJrPla/view?usp=sharing"> google drive</A>.  A snapshot of the code
 at the time of submission of this paper including the submitted preprint is available 
 at <A HREF="https://zenodo.org"> zenodo. </A>
 
