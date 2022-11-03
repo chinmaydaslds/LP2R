@@ -19,7 +19,7 @@ The code is available for download from <A HREF="https://github.com/chinmaydasld
 systems, you can use <em> make</em> command from <em> LP2R/src/obj </em> subdirectory to create the executable. 
 A precompiled windows executable is available from <A HREF="https://drive.google.com/file/d/1gO2Z3UWPi1zeLnvmpjs5II3OA2hJrPla/view?usp=sharing"> google drive</A>.  A snapshot of the code
 at the time of submission of this paper including the submitted preprint is available 
-at <A HREF="https://zenodo.org"> zenodo. </A>
+at <A HREF="https://zenodo.org/record/7276482#.Y2OTKnbP1PZ"> zenodo. </A>
 
 The rest of this page documents the command line options, input file syntax, and output file formats.
 
