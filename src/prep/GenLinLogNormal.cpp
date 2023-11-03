@@ -3,22 +3,6 @@
   * \brief Generate discrete representation of a logNormal distribution
   */
 
-/** 
-  * Series for complementary error function
-  * \param [in] x
-  * \return errc(x)
-  */
-double aaerfcc(const double x)
-{
-        double t,z,ans;
-
-        z=fabs(x);
-        t=1.0/(1.0+0.5*z);
-        ans=t*exp(-z*z-1.26551223+t*(1.00002368+t*(0.37409196+t*(0.09678418+
-                t*(-0.18628806+t*(0.27886807+t*(-1.13520398+t*(1.48851587+
-                t*(-0.82215223+t*0.17087277)))))))));
-        return x >= 0.0 ? ans : 2.0-ans;
-}
 
 /**
   * Weight fraction in a specified molar mass range from a logNormal distribution
@@ -38,22 +22,22 @@ double mu=log(Mw) - 1.50*log(PDI);
 double sigma=sqrt(log(PDI));
 double WtBin;
 if(M1 < 0.0){ // (0, M2)
-WtBin=0.5*aaerfcc( (mu + sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
-double t2=aaerfcc( (mu + 2.0*sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
+WtBin=0.5*erfc( (mu + sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
+double t2=erfc( (mu + 2.0*sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
 MwBin=0.50*Mw*t2/WtBin;  // t1=erfc(infinity)=0
             }
 else{
  if(M2 < 0.0){ // (M1, infinity)
-  WtBin=1.0 - 0.5*aaerfcc( (mu + sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
-  double t1=aaerfcc( (mu + 2.0*sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
+  WtBin=1.0 - 0.5*erfc( (mu + sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
+  double t1=erfc( (mu + 2.0*sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
   MwBin=0.50*Mw*(2.0 - t1)/WtBin;
              }
  else{ // (M1, M2)
-    double w1=0.5*aaerfcc( (mu + sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
-    double w2=0.5*aaerfcc( (mu + sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
+    double w1=0.5*erfc( (mu + sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
+    double w2=0.5*erfc( (mu + sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
     WtBin=w2-w1;
-    double t1=aaerfcc( (mu + 2.0*sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
-    double t2=aaerfcc( (mu + 2.0*sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
+    double t1=erfc( (mu + 2.0*sigma*sigma - log(M1))/(sqrt(2.0)*sigma) );
+    double t2=erfc( (mu + 2.0*sigma*sigma - log(M2))/(sqrt(2.0)*sigma) );
     MwBin=0.50*Mw*(t2 - t1)/WtBin;
      }
     }

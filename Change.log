@@ -1,0 +1,12 @@
+v1.1
+* R(t) beyond reptation time is handled analytically and involves complimentary error function.
+  The series approximation performs poorly at very short times for very long polymers.
+  Series approximation is replaced by in-built erfc function in GoftTube.cpp and in GenLinLogNormal.cpp
+  Removed code for series approximation
+
+* "time" in the exponential was missing in in-tube Rouse contribution in G(t)
+   Corrected in GoftFast.cpp
+
+* Change in  ReadRCFL.cpp: Correctly set STmaxDrop and Log_DtMult if no
+    resource file were supplied. 
+    (previously it required at least an empty resource file)

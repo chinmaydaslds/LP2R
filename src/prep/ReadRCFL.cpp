@@ -47,13 +47,8 @@ using namespace LP2R_NS;
 
 std::fstream f1;
 f1.open(rcFNM, std::ios_base::in);
-if(!f1){
-if(GenLogFL){
- f_Log << std::endl << "Did not find resource file " << rcFNM << std::endl;
- f_Log << "    (will proceed will default parameters)" << std::endl;
-            }
-return;} // no resource file, proceed with default
 
+if(f1){
 if(GenLogFL){
 f_Log << std::endl << "Found resource file " << rcFNM <<  std::endl;
             }
@@ -115,6 +110,13 @@ while(!readEquality(f1,sL,sR).eof()){
 
                                     }
 f1.close();
+  }
+else{
+if(GenLogFL){
+ f_Log << std::endl << "Did not find resource file " << rcFNM << std::endl;
+ f_Log << "    (will proceed will default parameters)" << std::endl;
+            }
+           } // no resource file, proceed with default
 CSVdelimiter+=" "; // Add a space here 
 // Long time maximum allowed drop in phi_ST during one time-step
 STmaxDrop=exp(-log(DtMult)/(2.0*Alpha));

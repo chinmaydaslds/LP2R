@@ -1,10 +1,10 @@
 ## Linear rheology of linear polydisperse polymers
 
-Version 1.0
+Version 1.1
 
-22 Sept 2022
+03 Nov 2023
 
-\(c\) 2022 Chinmay Das and Daniel J. Read
+\(c\) 2022, 2023 Chinmay Das and Daniel J. Read
 
 *GNU GPLv3 (or at your option any later version)*
 

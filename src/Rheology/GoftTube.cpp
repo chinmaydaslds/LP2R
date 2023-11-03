@@ -1,6 +1,6 @@
 #include "../include/LP2R.h"
 /** \file
-  * \brief G(t) contribution from in-tube Rouse modes
+  * \brief G(t) contribution from tube constraints: \f$ mu(t)*R(t) \f$
   *
   * \param[in] t time in units of tau_e
   * \param[out] muoft Tube survival probability \f$ \mu(t) \f$
@@ -22,7 +22,7 @@ if(Entangled_Dynamics){
                        }
   double taud=t_ar[n-1];
   double rint=0.50*pow(phi_ST_ar[n-1], Alpha)*1.77245385090551602729*sqrt(taud/t)*
-    (1.0 - aaerfcc(sqrt(t/taud))); // integral beyond when muoft goes to zero
+    (1.0 - erfc(sqrt(t/taud))); // integral beyond when muoft goes to zero
   Roft+=rint;
   goft=muoft*Roft;
                       }

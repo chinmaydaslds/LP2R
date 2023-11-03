@@ -32,7 +32,7 @@ using LP2R_NS::GenLogFL;
 using LP2R_NS::f_Log;
 int rtval=0;
 try{
- TCLAP::CmdLine cmd("Linear Polydisperse Polymer (linear) Rheology\n (c) 2022 Chinmay Das and Daniel J. Read \n GNU GPLv3 (or at your option any later version)", ' ', "1.0");
+ TCLAP::CmdLine cmd("Linear Polydisperse Polymer (linear) Rheology\n (c) 2022,2023 Chinmay Das and Daniel J. Read \n GNU GPLv3 (or at your option any later version)", ' ', "1.1");
  TCLAP::ValueArg<std::string> inpFLarg("i", "Input_File", "Input file name", false, "inp.dat","input file");
  cmd.add(inpFLarg);
  TCLAP::ValueArg<std::string> rcFLarg("r", "Resource_File", "Resource file name", false, "LP2R.rc","resource file");

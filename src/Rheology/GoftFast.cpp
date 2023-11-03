@@ -18,12 +18,12 @@ zi=(int) ceil(zz);
 gR=0.0;
   for(int p=1; p<zi; p++){ // longitudinal contribution
    double psq=(double) (p*p);
-   gR+=exp(-psq/tauR);
+   gR+=exp(-psq*t/tauR);
                          }
 int max_term=(int)ceil(N_e * zz);
   for(int p=zi; p<max_term; p++){ // internal Rouse modes
     double psq2=(double) (2*p*p);
-    gR+=5.0*exp(-psq2/tauR);
+    gR+=5.0*exp(-psq2*t/tauR);
                                 }
 gt+= gR*LPoly[i1]->wt/(4.0*zz);
                                 }
